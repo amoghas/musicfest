@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  icon_path: MyString
+  file_path: MyString
+  bg_color: MyString
+  txt_color: MyString
+  starts_at: 2019-09-01 12:11:57
+  ends_at: 2019-09-01 12:11:57
+
+two:
+  title: MyString
+  description: MyText
+  icon_path: MyString
+  file_path: MyString
+  bg_color: MyString
+  txt_color: MyString
+  starts_at: 2019-09-01 12:11:57
+  ends_at: 2019-09-01 12:11:57
