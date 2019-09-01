@@ -12,6 +12,9 @@ gem 'rails', '~> 5.0.7', '>= 5.0.7.2'
 gem 'mysql2', '~> 0.5.2'
 gem 'carrierwave'
 gem 'devise'
+gem 'bootstrap', '~> 4.1.1'
+gem 'jquery-rails'
+gem 'rails_layout'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
