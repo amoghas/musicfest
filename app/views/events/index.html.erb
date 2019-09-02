@@ -22,7 +22,8 @@
       <tr>
         <td><%= event.title %></td>
         <td><%= event.description %></td>
-        <td><%= event.icon_path %></td>
+        <td><strong>Image:</strong>
+  <%= image_tag event.icon_path.thumb.url %></td>
         <td><%= event.file_path %></td>
         <td><%= event.bg_color %></td>
         <td><%= event.txt_color %></td>
