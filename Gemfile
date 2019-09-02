@@ -13,7 +13,7 @@ gem 'mysql2', '~> 0.5.2'
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.3'
 gem 'devise'
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'rails_layout'
 # Use Puma as the app server
