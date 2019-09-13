@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Icon path</th>
+      <th>File path</th>
+      <th>Bg color</th>
+      <th>Txt color</th>
+      <th>Starts at</th>
+      <th>Ends at</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.title %></td>
+        <td><%= event.description %></td>
+        <td><strong>Image:</strong>
+  <%= image_tag event.icon_path.thumb.url %></td>
+        <td><%= event.file_path %></td>
+        <td><%= event.bg_color %></td>
+        <td><%= event.txt_color %></td>
+        <td><%= event.starts_at %></td>
+        <td><%= event.ends_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
