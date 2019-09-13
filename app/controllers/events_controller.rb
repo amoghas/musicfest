@@ -1,8 +1,6 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
-  skip_before_filter :authenticate_user!, :only => :public_view
-
   # GET /events
   # GET /events.json
   def index

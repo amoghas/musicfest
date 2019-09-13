@@ -40,7 +40,7 @@
         <td><%= event.title %></td>
         <td><%= event.description %></td>
         <td><%= event.icon_path %></td>
-        <td><%= event.file_path %></td>
+        <td><%= image_tag event.file_path&.large&.url unless event.file_path.blank?  %></td>
         <td><%= event.bg_color %></td>
         <td><%= event.txt_color %></td>
         <td><%= event.starts_at %></td>

@@ -22,23 +22,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :icon_path %>
-    <%= f.text_field :icon_path %>
-  </div>
-
-  <div class="field">
     <%= f.label :file_path %>
-    <%= f.text_field :file_path %>
-  </div>
-
-  <div class="field">
-    <%= f.label :bg_color %>
-    <%= f.text_field :bg_color %>
-  </div>
-
-  <div class="field">
-    <%= f.label :txt_color %>
-    <%= f.text_field :txt_color %>
+    <%= f.file_field :file_path %>
   </div>
 
   <div class="field">
@@ -68,7 +53,7 @@
 
   <div class="field">
     <%= f.label :djs %>
-    <%= f.text_field :djs %>
+    <%= f.text_field :djs  , label: "DJ Details"%>
   </div>
 
   <div class="field">
@@ -87,23 +72,23 @@
   </div>
 
   <div class="field">
-    <%= f.label :fb %>
-    <%= f.text_field :fb %>
+    <%= f.label "Facebook Link" %>
+    <%= f.text_field :fb  , label: "Facebook Link"%>
   </div>
 
   <div class="field">
     <%= f.label :twitter %>
-    <%= f.text_field :twitter %>
+    <%= f.text_field :twitter  , label: "Twitter Link"%>
   </div>
 
   <div class="field">
-    <%= f.label :instagram %>
-    <%= f.text_field :instagram %>
+    <%= f.label "Instagram Link" %>
+    <%= f.text_field :instagram  , label: "Instagram Link"%>
   </div>
 
   <div class="field">
-    <%= f.label :youtube %>
-    <%= f.text_field :youtube %>
+    <%= f.label "Youtube Link" %>
+    <%= f.text_field :youtube , label: "Youtube Link"%>
   </div>
 
   <div class="field">
