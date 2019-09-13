@@ -25,5 +25,10 @@ test:
   database: musicfest_tst
 
 production:
-  <<: *default
+  adapter: postgresql
+  host: ec2-174-129-27-3.compute-1.amazonaws.com
+  encoding: unicode
   database: musicfest_prod
+  pool: 5
+  username: ywbobvdeofbxag
+  password: 427f21632bf596d49c76b2a2d74177ed640e09a3e8445ccf2a1f1bf1ac13d9a9
