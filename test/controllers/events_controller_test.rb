@@ -17,7 +17,7 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create event" do
     assert_difference('Event.count') do
-      post events_url, params: { event: { bg_color: @event.bg_color, description: @event.description, ends_at: @event.ends_at, file_path: @event.file_path, icon_path: @event.icon_path, starts_at: @event.starts_at, title: @event.title, txt_color: @event.txt_color } }
+      post events_url, params: { event: { bg_color: @event.bg_color, bus: @event.bus, country: @event.country, description: @event.description, djs: @event.djs, ends_at: @event.ends_at, fb: @event.fb, file_path: @event.file_path, flight: @event.flight, hotels: @event.hotels, icon_path: @event.icon_path, instagram: @event.instagram, intro: @event.intro, location: @event.location, packages: @event.packages, shop_links: @event.shop_links, starts_at: @event.starts_at, tags: @event.tags, title: @event.title, train: @event.train, twitter: @event.twitter, txt_color: @event.txt_color, venue: @event.venue, website: @event.website, youtube: @event.youtube } }
     end
 
     assert_redirected_to event_url(Event.last)
@@ -34,7 +34,7 @@ class EventsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update event" do
-    patch event_url(@event), params: { event: { bg_color: @event.bg_color, description: @event.description, ends_at: @event.ends_at, file_path: @event.file_path, icon_path: @event.icon_path, starts_at: @event.starts_at, title: @event.title, txt_color: @event.txt_color } }
+    patch event_url(@event), params: { event: { bg_color: @event.bg_color, bus: @event.bus, country: @event.country, description: @event.description, djs: @event.djs, ends_at: @event.ends_at, fb: @event.fb, file_path: @event.file_path, flight: @event.flight, hotels: @event.hotels, icon_path: @event.icon_path, instagram: @event.instagram, intro: @event.intro, location: @event.location, packages: @event.packages, shop_links: @event.shop_links, starts_at: @event.starts_at, tags: @event.tags, title: @event.title, train: @event.train, twitter: @event.twitter, txt_color: @event.txt_color, venue: @event.venue, website: @event.website, youtube: @event.youtube } }
     assert_redirected_to event_url(@event)
   end
 

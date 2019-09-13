@@ -1,4 +1,4 @@
-<%= form_for(event) do |f| %>
+<%= simple_form_for(event) do |f| %>
   <% if event.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
@@ -18,12 +18,12 @@
 
   <div class="field">
     <%= f.label :description %>
-    <%= f.text_area :description %>
+    <%= f.text_area :description , as: :text %>
   </div>
 
   <div class="field">
     <%= f.label :icon_path %>
-    <%= f.file_field :icon_path %>
+    <%= f.text_field :icon_path %>
   </div>
 
   <div class="field">
@@ -49,6 +49,91 @@
   <div class="field">
     <%= f.label :ends_at %>
     <%= f.datetime_select :ends_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :country %>
+    <%= f.text_field :country %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= f.label :website %>
+    <%= f.text_field :website %>
+  </div>
+
+  <div class="field">
+    <%= f.label :djs %>
+    <%= f.text_field :djs %>
+  </div>
+
+  <div class="field">
+    <%= f.label :venue %>
+    <%= f.text_field :venue %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tags %>
+    <%= f.text_field :tags %>
+  </div>
+
+  <div class="field">
+    <%= f.label :intro %>
+    <%= f.text_field :intro %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fb %>
+    <%= f.text_field :fb %>
+  </div>
+
+  <div class="field">
+    <%= f.label :twitter %>
+    <%= f.text_field :twitter %>
+  </div>
+
+  <div class="field">
+    <%= f.label :instagram %>
+    <%= f.text_field :instagram %>
+  </div>
+
+  <div class="field">
+    <%= f.label :youtube %>
+    <%= f.text_field :youtube %>
+  </div>
+
+  <div class="field">
+    <%= f.label :packages %>
+    <%= f.text_field :packages %>
+  </div>
+
+  <div class="field">
+    <%= f.label :shop_links %>
+    <%= f.text_field :shop_links %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hotels %>
+    <%= f.text_field :hotels %>
+  </div>
+
+  <div class="field">
+    <%= f.label :flight %>
+    <%= f.text_field :flight %>
+  </div>
+
+  <div class="field">
+    <%= f.label :train %>
+    <%= f.text_field :train %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bus %>
+    <%= f.text_field :bus %>
   </div>
 
   <div class="actions">

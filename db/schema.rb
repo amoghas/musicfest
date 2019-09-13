@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190901064157) do
+ActiveRecord::Schema.define(version: 20190913144657) do
 
   create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "title"
@@ -21,6 +21,23 @@ ActiveRecord::Schema.define(version: 20190901064157) do
     t.string   "txt_color"
     t.datetime "starts_at"
     t.datetime "ends_at"
+    t.string   "country"
+    t.string   "location"
+    t.string   "website"
+    t.string   "djs"
+    t.string   "venue"
+    t.string   "tags"
+    t.string   "intro"
+    t.string   "fb"
+    t.string   "twitter"
+    t.string   "instagram"
+    t.string   "youtube"
+    t.string   "packages"
+    t.string   "shop_links"
+    t.string   "hotels"
+    t.string   "flight"
+    t.string   "train"
+    t.string   "bus"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end

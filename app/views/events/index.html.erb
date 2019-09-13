@@ -13,6 +13,23 @@
       <th>Txt color</th>
       <th>Starts at</th>
       <th>Ends at</th>
+      <th>Country</th>
+      <th>Location</th>
+      <th>Website</th>
+      <th>Djs</th>
+      <th>Venue</th>
+      <th>Tags</th>
+      <th>Intro</th>
+      <th>Fb</th>
+      <th>Twitter</th>
+      <th>Instagram</th>
+      <th>Youtube</th>
+      <th>Packages</th>
+      <th>Shop links</th>
+      <th>Hotels</th>
+      <th>Flight</th>
+      <th>Train</th>
+      <th>Bus</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,13 +39,29 @@
       <tr>
         <td><%= event.title %></td>
         <td><%= event.description %></td>
-        <td><strong>Image:</strong>
-  <%= image_tag event.icon_path.thumb.url %></td>
+        <td><%= event.icon_path %></td>
         <td><%= event.file_path %></td>
         <td><%= event.bg_color %></td>
         <td><%= event.txt_color %></td>
         <td><%= event.starts_at %></td>
         <td><%= event.ends_at %></td>
+        <td><%= event.country %></td>
+        <td><%= event.location %></td>
+        <td><%= event.website %></td>
+        <td><%= event.djs %></td>
+        <td><%= event.venue %></td>
+        <td><%= event.tags %></td>
+        <td><%= event.intro %></td>
+        <td><%= event.fb %></td>
+        <td><%= event.twitter %></td>
+        <td><%= event.instagram %></td>
+        <td><%= event.youtube %></td>
+        <td><%= event.packages %></td>
+        <td><%= event.shop_links %></td>
+        <td><%= event.hotels %></td>
+        <td><%= event.flight %></td>
+        <td><%= event.train %></td>
+        <td><%= event.bus %></td>
         <td><%= link_to 'Show', event %></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
         <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>

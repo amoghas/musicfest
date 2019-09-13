@@ -7,8 +7,25 @@ one:
   file_path: MyString
   bg_color: MyString
   txt_color: MyString
-  starts_at: 2019-09-01 12:11:57
-  ends_at: 2019-09-01 12:11:57
+  starts_at: 2019-09-13 20:16:57
+  ends_at: 2019-09-13 20:16:57
+  country: MyString
+  location: MyString
+  website: MyString
+  djs: MyString
+  venue: MyString
+  tags: MyString
+  intro: MyString
+  fb: MyString
+  twitter: MyString
+  instagram: MyString
+  youtube: MyString
+  packages: MyString
+  shop_links: MyString
+  hotels: MyString
+  flight: MyString
+  train: MyString
+  bus: MyString
 
 two:
   title: MyString
@@ -17,5 +34,22 @@ two:
   file_path: MyString
   bg_color: MyString
   txt_color: MyString
-  starts_at: 2019-09-01 12:11:57
-  ends_at: 2019-09-01 12:11:57
+  starts_at: 2019-09-13 20:16:57
+  ends_at: 2019-09-13 20:16:57
+  country: MyString
+  location: MyString
+  website: MyString
+  djs: MyString
+  venue: MyString
+  tags: MyString
+  intro: MyString
+  fb: MyString
+  twitter: MyString
+  instagram: MyString
+  youtube: MyString
+  packages: MyString
+  shop_links: MyString
+  hotels: MyString
+  flight: MyString
+  train: MyString
+  bus: MyString

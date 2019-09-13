@@ -1,12 +1,13 @@
 
 <% if user_signed_in? %>
   <ul class="nav">
+  <li><%= link_to 'Home', events_path %></li>
+    <%= render 'layouts/navigation_links' %>
   <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
     <%= render 'layouts/navigation_links' %>
   <li><%= link_to 'Create Event', new_event_path %></li>
     <%= render 'layouts/navigation_links' %>
-  <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
-    <%= render 'layouts/navigation_links' %>
+  <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete%></li>
   </ul>
 
 <%else%>
@@ -15,16 +16,9 @@
     <%= render 'layouts/navigation_links' %>
     <li><%= link_to 'Events', root_path %></li>
     <%= render 'layouts/navigation_links' %>
-    <li><%= link_to 'Contact Us', root_path %></li>
+    <li><%= link_to 'Discover', root_path %></li>
     <%= render 'layouts/navigation_links' %>
     <li><%= link_to 'Contact Us', root_path %></li>
-    <%= render 'layouts/navigation_links' %>
-    <li><%= link_to 'Home', root_path %></li>
-    <%= render 'layouts/navigation_links' %>
-    <li><%= link_to 'Home', root_path %></li>
-    <%= render 'layouts/navigation_links' %>
-    <li><%= link_to 'Home', root_path %></li>
-    <%= render 'layouts/navigation_links' %>
   </ul>
 
 <%end%>

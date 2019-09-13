@@ -12,7 +12,7 @@
 
 <p>
   <strong>Icon path:</strong>
-  <%= image_tag @event.icon_path.thumb.url %>
+  <%= @event.icon_path %>
 </p>
 
 <p>
@@ -38,6 +38,91 @@
 <p>
   <strong>Ends at:</strong>
   <%= @event.ends_at %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @event.country %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @event.location %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @event.website %>
+</p>
+
+<p>
+  <strong>Djs:</strong>
+  <%= @event.djs %>
+</p>
+
+<p>
+  <strong>Venue:</strong>
+  <%= @event.venue %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @event.tags %>
+</p>
+
+<p>
+  <strong>Intro:</strong>
+  <%= @event.intro %>
+</p>
+
+<p>
+  <strong>Fb:</strong>
+  <%= @event.fb %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @event.twitter %>
+</p>
+
+<p>
+  <strong>Instagram:</strong>
+  <%= @event.instagram %>
+</p>
+
+<p>
+  <strong>Youtube:</strong>
+  <%= @event.youtube %>
+</p>
+
+<p>
+  <strong>Packages:</strong>
+  <%= @event.packages %>
+</p>
+
+<p>
+  <strong>Shop links:</strong>
+  <%= @event.shop_links %>
+</p>
+
+<p>
+  <strong>Hotels:</strong>
+  <%= @event.hotels %>
+</p>
+
+<p>
+  <strong>Flight:</strong>
+  <%= @event.flight %>
+</p>
+
+<p>
+  <strong>Train:</strong>
+  <%= @event.train %>
+</p>
+
+<p>
+  <strong>Bus:</strong>
+  <%= @event.bus %>
 </p>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |

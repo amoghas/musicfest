@@ -15,6 +15,7 @@ gem 'mini_magick', '~> 4.3'
 gem 'devise'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+gem 'simple_form'
 gem 'rails_layout'
 gem 'pg', '~> 0.18.4'
 # Use Puma as the app server
