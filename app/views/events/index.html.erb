@@ -62,9 +62,9 @@
         <td><%= event.flight %></td>
         <td><%= event.train %></td>
         <td><%= event.bus %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Show', event_path(event) %></td>
+        <td><%= button_to 'Edit', edit_event_path(event) %></td>
+        <td><%= button_to 'Destroy', event_path(event), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

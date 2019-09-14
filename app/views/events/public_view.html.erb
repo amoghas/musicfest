@@ -9,8 +9,6 @@
       <th>Description</th>
       <th>Icon path</th>
       <th>File path</th>
-      <th>Bg color</th>
-      <th>Txt color</th>
       <th>Starts at</th>
       <th>Ends at</th>
     </tr>
@@ -21,11 +19,8 @@
       <tr>
         <td><%= event.title %></td>
         <td><%= event.description %></td>
-        <td><strong>Image:</strong>
-  <%= image_tag event.icon_path.thumb.url %></td>
-        <td><%= event.file_path %></td>
-        <td><%= event.bg_color %></td>
-        <td><%= event.txt_color %></td>
+        <td>
+  <%= image_tag event.file_path.thumb.url  unless event.file_path&.large.blank? %></td>
         <td><%= event.starts_at %></td>
         <td><%= event.ends_at %></td>
       </tr>
