@@ -1,4 +1,4 @@
-<%= simple_form_for(event) do |f| %>
+<%= simple_nested_form_for(event) do |f| %>
   <% if event.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
@@ -11,115 +11,42 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
+  <%= f.input :title %>
+  <%= f.input :description , as: :text %>
+  <%= f.file_field :file_path %>
+  <%= f.input :starts_at %>
+  <%= f.input :ends_at %>
+  <%= f.input :country %>
+  <%= f.input :location %>
+  <%= f.input :djs  , label: "DJ Details"%>
+  <%= f.input :venue %>
+  <%= f.input :tags %>
+  <%= f.input :intro %>
 
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description , as: :text %>
-  </div>
+<table id="event_links">
+  <%= f.simple_fields_for :event_links, :wrapper => false do |link| %>
+    <tr class="fields">
+      <td><%= link.input :name  , as: :text , label: "Link Name"%></td>
+      <td><%= link.input :description ,as: :text %></td>
+      <td><%= link.input :link , as: :text , label: "URL"%></td>
+      <td><%= link.input :link_type, :as => :select, :collection => EventLink::link_types.keys.to_a  %></td>
+      <td><%= link.link_to_remove "Remove this Link" %></td>
+    </tr>
+  <% end %>
+</table>
+<p><%= f.link_to_add "Add a Link", :event_links, :data => { :target => "#event_links" } %></p>
 
-  <div class="field">
-    <%= f.label :file_path %>
-    <%= f.file_field :file_path %>
-  </div>
-
-  <div class="field">
-    <%= f.label :starts_at %>
-    <%= f.datetime_select :starts_at %>
-  </div>
-
-  <div class="field">
-    <%= f.label :ends_at %>
-    <%= f.datetime_select :ends_at %>
-  </div>
-
-  <div class="field">
-    <%= f.label :country %>
-    <%= f.text_field :country %>
-  </div>
-
-  <div class="field">
-    <%= f.label :location %>
-    <%= f.text_field :location %>
-  </div>
-
-  <div class="field">
-    <%= f.label :website %>
-    <%= f.text_field :website %>
-  </div>
-
-  <div class="field">
-    <%= f.label :djs %>
-    <%= f.text_field :djs  , label: "DJ Details"%>
-  </div>
-
-  <div class="field">
-    <%= f.label :venue %>
-    <%= f.text_field :venue %>
-  </div>
-
-  <div class="field">
-    <%= f.label :tags %>
-    <%= f.text_field :tags %>
-  </div>
-
-  <div class="field">
-    <%= f.label :intro %>
-    <%= f.text_field :intro %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Facebook Link" %>
-    <%= f.text_field :fb  , label: "Facebook Link"%>
-  </div>
-
-  <div class="field">
-    <%= f.label :twitter %>
-    <%= f.text_field :twitter  , label: "Twitter Link"%>
-  </div>
-
-  <div class="field">
-    <%= f.label "Instagram Link" %>
-    <%= f.text_field :instagram  , label: "Instagram Link"%>
-  </div>
-
-  <div class="field">
-    <%= f.label "Youtube Link" %>
-    <%= f.text_field :youtube , label: "Youtube Link"%>
-  </div>
-
-  <div class="field">
-    <%= f.label :packages %>
-    <%= f.text_field :packages %>
-  </div>
-
-  <div class="field">
-    <%= f.label :shop_links %>
-    <%= f.text_field :shop_links %>
-  </div>
-
-  <div class="field">
-    <%= f.label :hotels %>
-    <%= f.text_field :hotels %>
-  </div>
-
-  <div class="field">
-    <%= f.label :flight %>
-    <%= f.text_field :flight %>
-  </div>
-
-  <div class="field">
-    <%= f.label :train %>
-    <%= f.text_field :train %>
-  </div>
-
-  <div class="field">
-    <%= f.label :bus %>
-    <%= f.text_field :bus %>
-  </div>
+<table id="event_photos">
+  <%= f.simple_fields_for :event_photos, :wrapper => false do |photo| %>
+    <tr class="fields">
+      <td><%= photo.input :name %></td>
+      <td><%= photo.input :description %></td>
+      <td><%= photo.file_field :file_path %></td>
+      <td><%= photo.link_to_remove "Remove this Photo" %></td>
+    </tr>
+  <% end %>
+</table>
+<p><%= f.link_to_add "Add a Photo", :event_photos, :data => { :target => "#event_photos" } %></p>
 
   <div class="actions">
     <%= f.submit %>
