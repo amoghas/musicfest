@@ -1,13 +1,55 @@
-<footer class="footer">
-  <small>
-    The <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-    by <a href="http://www.michaelhartl.com/">Michael Hartl</a>
-  </small>
-  <nav>
-    <ul>
-      <li><%= link_to "About",   '#' %></li>
-      <li><%= link_to "Contact", '#' %></li>
-      <li><a href="http://news.railstutorial.org/">News</a></li>
-    </ul>
-  </nav>
-</footer>
+<!-- FOOTER TOP AREA -->
+  <div class="footer-middle"> 
+    <div class="container">
+        <div class="row"> 
+          <div class="col-md-4 col-sm-6 col-12"> 
+            <a href="#" class="logo"><%= image_tag asset_path("assets/logo.jpeg") %></a> 
+            <p class="mt-20 justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <ul class="social-links-footer"> 
+              <li><a href="#"><i class="ti-facebook"></i></a></li>
+              <li><a href="#"><i class="ti-twitter"></i></a></li>
+              <li><a href="#"><i class="ti-instagram"></i></a></li>
+              <li><a href="#"><i class="ti-linkedin"></i></a></li>
+            </ul> 
+          </div>
+          <div class="col-md-4 col-sm-6 col-12"> 
+            <div class="row mt-25"> 
+              <div class="col-md-6 col-sm-6"> 
+                <h2>Extra Links</h2> 
+                <ul class="footer-nav"> 
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Term & Conditions</a></li>
+                </ul> 
+              </div>
+              <div class="col-md-6 col-sm-6"> 
+                <h2>Fest images</h2>
+                <ul class="footer-nav"> 
+                  <%= image_tag asset_path("assets/1.jpg") %>
+                  <%= image_tag asset_path("assets/2.jpg") %>
+                  <%= image_tag asset_path("/assets/5.jpg") %>
+                </ul> 
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-12"> 
+            <h2>Address</h2> 
+            <div class="footer-address">
+              <div class="footer_address_inner">
+                <ul><li><i class="fa fa-map-marker"></i><p>3rd Lorem Ipsum is simply</p></li></ul>
+                <ul><li><i class="fa fa-map"></i><p>Lorem Ipsum is simply dummy UAE</p></li></ul>
+                <ul><li><i class="fa fa-phone"></i><p>+(91) 9999999999 , (010) 66666143</p></li></ul>
+                <ul><li><i class="fa fa-envelope"></i><p>Info@wwf.com</p></li></ul>
+              </div>
+            </div> 
+          </div>
+        </div>
+      <!-- FOOTER BOTTOM AREA -->
+      <div class="footer-1-bar">
+        <p>© 2019 World Wide Fests. All Rights Reserved</p>
+      </div>
+      <!-- END FOOTER BOTTOM AREA -->
+    </div>
+  </div>    
+  <!-- END FOOTER TOP AREA -->
