@@ -8,6 +8,8 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.7', '>= 5.0.7.2'
+gem "nested_form"
+gem 'country_select'
 # Use sqlite3 as the database for Active Record
 gem 'mysql2', '~> 0.5.2'
 gem 'carrierwave', '~> 0.10.0'
@@ -20,7 +22,8 @@ gem 'rails_layout'
 gem 'pg', '~> 0.18.4'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
-gem 'wicked'
+#gem 'wicked'
+gem 'high_voltage', '~> 3.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.4.1'

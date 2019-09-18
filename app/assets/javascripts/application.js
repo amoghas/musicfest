@@ -9,11 +9,12 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
+
 //= require jquery3
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery_nested_form
 //= require_tree .
-
 //= require jquery-3.1.1.min
 //= require bootstrap.min
 //= require slick.min
@@ -148,3 +149,18 @@ $(document)
     }
     e.preventDefault(); // prevent the default action (scroll / move caret)
 });
+
+$('form').on('click', '.remove_fields', function(event) {
+  $(this).prev('input[type=hidden]').val('1');
+  $(this).closest('fieldset').hide();
+  return event.preventDefault();
+});
+
+$('form').on('click', '.add_fields', function(event) {
+  var regexp, time;
+  time = new Date().getTime();
+  regexp = new RegExp($(this).data('id'), 'g');
+  $(this).before($(this).data('fields').replace(regexp, time));
+  return event.preventDefault();
+});
+

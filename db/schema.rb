@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190913144657) do
+ActiveRecord::Schema.define(version: 20190918101818) do
+
+  create_table "event_links", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string  "name"
+    t.text    "description", limit: 65535
+    t.text    "link",        limit: 65535
+    t.integer "link_type"
+    t.integer "event_id"
+  end
+
+  create_table "event_photos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string  "name"
+    t.text    "description", limit: 65535
+    t.text    "file_path",   limit: 65535
+    t.integer "event_id"
+  end
 
   create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "title"
