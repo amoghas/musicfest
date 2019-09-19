@@ -4,36 +4,8 @@
     <h3 class="dancing">Almost before we knew</h3>
   </div>
 </div>
-<p id="notice"><%= notice %></p>
 
 <h1>Events</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Icon path</th>
-      <th>File path</th>
-      <th>Starts at</th>
-      <th>Ends at</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @events.each do |event| %>
-      <tr>
-        <td><%= event.title %></td>
-        <td><%= event.description %></td>
-        <td>
-  <%= image_tag event.file_path.thumb.url  unless event.file_path&.large.blank? %></td>
-        <td><%= event.starts_at %></td>
-        <td><%= event.ends_at %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
 <br>
 
 <div class="container-fluid">
