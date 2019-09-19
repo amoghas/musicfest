@@ -45,7 +45,7 @@ ul {
     margin: 0;
 }
 p{
-	margin: 0;
+  margin: 0;
 }
 li {
     list-style-type: none;
@@ -73,7 +73,7 @@ a:hover{
     text-decoration: none;
 }
 h3.dancing{
-	font-family: 'Dancing Script', cursive;
+  font-family: 'Dancing Script', cursive;
 }
 .logo img{
     width: 100px;
@@ -82,36 +82,36 @@ h3.dancing{
    background: rgba(0,0,0,.91) !important;
    .logo img{
     width: 70px;
-	}
+  }
 }
 .main-menu{
-	margin: 0;
-	nav {
+  margin: 0;
+  nav {
     background: rgba(0,0,0,.31);
     ul li{
-	    padding: 0.5rem 1rem !important;
-	    a{
-		    color: #fff;
-		    font-size: 14px;
-		    font-weight: 600;
-		    display: block;
-		    text-transform: uppercase;
-		    position: relative;
-		    padding: 0 !important;
-		    &::before {
-			    position: absolute;
-			    content: "";
-			    left: -2px;
-			    bottom: -6px;
-			    width: 0%;
-			    border-bottom: 5px dotted #fff;
-			    -webkit-transition: .3s;
-			    -o-transition: .3s;
-			    transition: .3s;
-				}
-			}
-		}
-	}
+      padding: 0.5rem 1rem !important;
+      a{
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        display: block;
+        text-transform: uppercase;
+        position: relative;
+        padding: 0 !important;
+        &::before {
+          position: absolute;
+          content: "";
+          left: -2px;
+          bottom: -6px;
+          width: 0%;
+          border-bottom: 5px dotted #fff;
+          -webkit-transition: .3s;
+          -o-transition: .3s;
+          transition: .3s;
+        }
+      }
+    }
+  }
 } 
 
 .main-menu ul li a:hover::before, .main-menu ul li.active a::before {
@@ -186,20 +186,20 @@ h3.dancing{
     line-height: inherit;
     margin: 0;
     padding: 0;
-	}
-	form{
+  }
+  form{
     margin: 16px 0;
     max-width: 100%;
-	}
-	select{
+  }
+  select{
     width: 100% !important;
-	}
-	button{
+  }
+  button{
     width: 100%;
     color: #fff;
     background-color: #343a40;
     border-color: #343a40;
-	}
+  }
 }
 
 .admission_curosel.curosel-style .owl-nav div {
@@ -267,9 +267,9 @@ h3.dancing{
     padding-top: 0.5rem;
 }
 .section_title_style2 p{
-		width: 50%;
-		margin: 0 auto;
-		padding: 0.5rem 0 2rem;
+    width: 50%;
+    margin: 0 auto;
+    padding: 0.5rem 0 2rem;
 }
 
 .main_area{
@@ -280,21 +280,21 @@ h3.dancing{
     padding: 80px 0;
     margin: 3rem 0;
   nav{
-  	width: 100%;
+    width: 100%;
   }
   .wwf-breadcrumb{
-		display: flex;
-		flex-direction: row;
-		li{
-		   flex-grow: 1;
-	    flex-basis: 0;
-	    a{
-	    	display: block;
-	    	padding: 3rem;
-	    	color:#fff;
-	    }
-		}
-	}
+    display: flex;
+    flex-direction: row;
+    li{
+       flex-grow: 1;
+      flex-basis: 0;
+      a{
+        display: block;
+        padding: 3rem;
+        color:#fff;
+      }
+    }
+  }
 }
 .main-container-block{
     padding: 50px 30px;
@@ -308,7 +308,7 @@ h3.dancing{
     box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
 }
 .type-1{
-	background: #e5059a;
+  background: #e5059a;
 }
 .type-2{
     background: #7e75aa;
@@ -395,61 +395,113 @@ h3.dancing{
 }
 
 .explore_area{
-	padding-top: 5rem;
-	.explore_content {
-		padding: 0.5rem 1rem;
-		border: 1px solid #f4f4f4;
-		p{
-			margin: 0;
-		}
-		h5{
-			font-size:16px;
-			padding-top: 0.5rem;
-		}
-		.details{
-			font-size: 12px;
-			color: #999;
-		}
-	}
-	.single_explore{
-	  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-	  -moz-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-	  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-	}
+  padding-top: 5rem;
+  .explore_content {
+    padding: 0.5rem 1rem;
+    border: 1px solid #f4f4f4;
+    p{
+      margin: 0;
+    }
+    h5{
+      font-size:16px;
+      padding-top: 0.5rem;
+    }
+    .details{
+      font-size: 12px;
+      color: #999;
+    }
+  }
+  .single_explore{
+    -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .editors_area{
-	padding-top: 5rem;
-	.each-editor{
-		margin-bottom: 30px;
-		.card{
-			-webkit-box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
-	    -moz-box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
-	    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
-		}
-	}
-	.card-header{
-		padding: 0;
-	}
-	
-	.card-block{
-		padding: 1rem;
-		h4{
-			padding: 0.5rem 0;
-			font-size: 16px;
-			display: block;
-		  display: -webkit-box;
-		  max-width: 100%;
-		  height: 65px;
-		  margin: 0 auto;
-		  -webkit-line-clamp: 3;
-		  -webkit-box-orient: vertical;
-		  overflow: hidden;
-		  text-overflow: ellipsis;
-		  margin-bottom: 0.8rem;
-		}
-		p{
-			margin: 0;
-		}
-	}
+  padding-top: 5rem;
+  .each-editor{
+    margin-bottom: 30px;
+    .card{
+      -webkit-box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
+    }
+  }
+  .card-header{
+    padding: 0;
+  }
+  
+  .card-block{
+    padding: 1rem;
+    h4{
+      padding: 0.5rem 0;
+      font-size: 16px;
+      display: block;
+      display: -webkit-box;
+      max-width: 100%;
+      height: 65px;
+      margin: 0 auto;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 0.8rem;
+    }
+    p{
+      margin: 0;
+    }
+  }
 } 
+
+.inner-page{
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    background-image: image-url("bg.jpg");
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.inner-banner{
+  background-image: image-url("inner-bg.png");
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  h2{
+    padding-top: 10rem;
+    color: #fff;
+  }
+  h3{
+    padding-bottom: 3rem;
+    color: #fff;
+  }
+}
+
+.each-event{
+  padding-bottom: 2rem;
+}
+
+.event_content{
+  padding: 0.5rem 0;
+  h5{
+    font-size: 1rem;
+  }
+  .details{
+    color: #666;
+    font-size: 0.7rem;
+  }
+  .btn-book{
+    border: 1px solid #000;
+    padding: 0.2rem 1rem;
+    display: inline-block;
+    font-size: 0.8rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+    transition: all 0.25s;
+    &:hover{
+      background: red;
+      color:#fff;
+    }
+  }
+}
