@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   root to: 'pages#show', id: 'home'
   # root "events#public_view"
-  get 'pages/home' => 'high_voltage/pages#show', id: 'home'
+  # resources :pages, controller: 'pages', only: [:show]
 
-  resources :events
+  resources :events do 
+    collection do
+       get "public_view" => 'events#public_view' 
+    end
+  end
   devise_for :users do  
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
