@@ -124,6 +124,9 @@ $(document).ready(function(){
           updateGallery($(this));
         });
     }
+    $('.search-btn').click(function(){
+      $('.search-form').addClass('input-visible');
+    });
 });
 
 // build key actions
