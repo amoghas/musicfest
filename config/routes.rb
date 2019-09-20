@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root to: 'pages#show', id: 'home'
-  # root "events#public_view"
-  # resources :pages, controller: 'pages', only: [:show]
+  get "/pages/*id" => 'pages#show', as: :page, format: false
 
   resources :events do 
     collection do

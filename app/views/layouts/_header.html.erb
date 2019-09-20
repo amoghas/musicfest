@@ -16,9 +16,9 @@
                 <ul class="navbar-nav  ml-auto">
                     <li class="nav-item active"><%= link_to 'Home', "/" , method: :get%> </li>
                     <li class="nav-item"><%= link_to "Discover fests" , public_view_events_path%></li> 
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>          
-                    <li class="nav-item"><a class="nav-link" href="#">Free listings</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><%= link_to "About" , page_path("about_us")%> </li>          
+                    <li class="nav-item"><%= link_to "Free listings" , page_path("free_listings")%></li>
+                    <li class="nav-item"><%= link_to "Contact" , page_path("contact_us")%> </li>
                 </ul>
             <%end%>
             
