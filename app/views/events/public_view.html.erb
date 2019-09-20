@@ -37,7 +37,7 @@
       <div class="col-sm-3">
         <div class="each-event">
           <div class="event_thumb">
-            <%= image_tag event.file_path.url(:large) %>
+            <%= image_tag event.file_path.url(:large)  rescue ""%>
           </div>
           <div class="event_content text-center">
             <h5><%=event.title%></h5>

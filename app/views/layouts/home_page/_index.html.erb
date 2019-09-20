@@ -78,66 +78,21 @@
       <div class="row">
         <div class="col-md-12 main-admission">
           <div class="admission_curosel owl-carousel curosel-style">
-            <div class="col-md-12">
-              <div class="single_admision one">
-                <div class="admission_thumb">
-                  <%= image_tag asset_path("/assets/1.jpg") %>
-                </div>
-                <div class="admission_content ">
-                  <div class="admission_content_inner">
-                    <h3>3G UMTS</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="single_admision two">
-                <div class="admission_thumb">
-                   <%= image_tag asset_path("/assets/2.jpg") %>
-                </div>
-                <div class="admission_content">
-                  <div class="admission_content_inner">
-                    <h3>LONG TERM EVOLUTION</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="single_admision three">
-                <div class="admission_thumb">
-                   <%= image_tag asset_path("/assets/3.jpg") %>
-                </div>
-                <div class="admission_content">
-                  <div class="admission_content_inner">
-                    <h3>EDGE ARCHITECTURE</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="single_admision four">
-                <div class="admission_thumb">
-                   <%= image_tag asset_path("/assets/4.jpg") %>
-                </div>
-                <div class="admission_content">
-                  <div class="admission_content_inner">
-                    <h3>CDMA TECHNOLOGY</h3>
-                  </div>
-                </div>
-              </div>
-            </div><div class="col-md-12">
-                <div class="single_admision two">
+            <% Event.limit(10).each do |event|%>
+               <% next if event.file_path.blank?%>
+              <div class="col-md-12">
+                <div class="single_admision one">
                   <div class="admission_thumb">
-                     <%= image_tag asset_path("/assets/5.jpg") %>
+                    <%= image_tag event.file_path.url(:large)  rescue ""%>
                   </div>
-                  <div class="admission_content">
+                  <div class="admission_content ">
                     <div class="admission_content_inner">
-                      <h3>GPRS SERVICES</h3>
+                      <h3><%= event.title%></h3>
                     </div>
                   </div>
                 </div>
               </div>
-            
+            <%end%>
           </div>
         </div>
       </div>
@@ -158,81 +113,24 @@
       <div class="row">
         <div class="col-md-12 main-admission">
           <div class="admission_curosel owl-carousel curosel-style">
-            <div class="col-md-12">
-              <div class="single_explore one">
-                <div class="admission_thumb">
-                  <%= image_tag asset_path("/assets/4.jpg") %>
-                </div>
-                <div class="explore_content ">
-                  <p>3G UMTS</p>
-                  <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h5>
-                  <div class="details d-flex">
-                    <span>Kamalakar</span>
-                    <span class="ml-auto">2hrs ago</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="single_explore two">
-                <div class="admission_thumb">
-                  <%= image_tag asset_path("/assets/3.jpg") %>
-                </div>
-                <div class="explore_content ">
-                  <p>3G UMTS</p>
-                  <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h5>
-                  <div class="details d-flex">
-                    <span>Kamalakar</span>
-                    <span class="ml-auto">2hrs ago</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="single_explore three">
-                <div class="admission_thumb">
-                  <%= image_tag asset_path("/assets/2.jpg") %>
-                </div>
-                <div class="explore_content ">
-                  <p>3G UMTS</p>
-                  <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h5>
-                  <div class="details d-flex">
-                    <span>Kamalakar</span>
-                    <span class="ml-auto">2hrs ago</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="single_explore four">
-                <div class="admission_thumb">
-                  <%= image_tag asset_path("/assets/1.jpg") %>
-                </div>
-                <div class="explore_content ">
-                  <p>3G UMTS</p>
-                  <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h5>
-                  <div class="details d-flex">
-                    <span>Kamalakar</span>
-                    <span class="ml-auto">2hrs ago</span>
-                  </div>
-                </div>
-              </div>
-            </div><div class="col-md-12">
-                <div class="single_explore two">
+            <% Event.limit(10).each do |event|%>
+              <% next if event.file_path.blank?%>
+              <div class="col-md-12">
+                <div class="single_explore one">
                   <div class="admission_thumb">
-                    <%= image_tag asset_path("/assets/5.jpg") %>
+                    <%= image_tag event.file_path.url(:large)  rescue ""%>
                   </div>
                   <div class="explore_content ">
-                    <p>3G UMTS</p>
-                    <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h5>
+                    <p><%= event.title%></p>
+                    <h5><%= event.description%></h5>
                     <div class="details d-flex">
-                      <span>Kamalakar</span>
+                      <span><%= event.djs%></span>
                       <span class="ml-auto">2hrs ago</span>
                     </div>
                   </div>
                 </div>
               </div>
-            
+            <%end%>
           </div>
         </div>
       </div>
@@ -252,79 +150,20 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4 each-editor">
-          <div class="card flex-row flex-wrap">
-            <div class="card-header border-0 col-sm-5">
-              <%= image_tag asset_path("/assets/5.jpg") %>
-            </div>
-            <div class="card-block col-sm-7">
-              <p>Skin Care</p>
-              <h4 class="card-title">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-              <p>by GANESH</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 each-editor">
-          <div class="card flex-row flex-wrap">
-            <div class="card-header border-0 col-sm-5">
-              <%= image_tag asset_path("/assets/1.jpg") %>
-            </div>
-            <div class="card-block col-sm-7">
-              <p>Skin Care</p>
-              <h4 class="card-title">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-              <p>by GANESH</p>
+        <% Event.limit(10).each do |event|%>
+          <div class="col-md-4 each-editor">
+            <div class="card flex-row flex-wrap">
+              <div class="card-header border-0 col-sm-5">
+                <%= image_tag event.file_path.url(:large)  rescue ""%>
+              </div>
+              <div class="card-block col-sm-7">
+                <p>Skin Care</p>
+                <h4 class="card-title"><%= event.title%></h4>
+                <p>by <%=event.djs%></p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4 each-editor">
-          <div class="card flex-row flex-wrap">
-            <div class="card-header border-0 col-sm-5">
-              <%= image_tag asset_path("/assets/4.jpg") %>
-            </div>
-            <div class="card-block col-sm-7">
-              <p>Skin Care</p>
-              <h4 class="card-title">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-              <p>by GANESH</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 each-editor">
-          <div class="card flex-row flex-wrap">
-            <div class="card-header border-0 col-sm-5">
-              <%= image_tag asset_path("/assets/3.jpg") %>
-            </div>
-            <div class="card-block col-sm-7">
-              <p>Skin Care</p>
-              <h4 class="card-title">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-              <p>by GANESH</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 each-editor">
-          <div class="card flex-row flex-wrap">
-            <div class="card-header border-0 col-sm-5">
-              <%= image_tag asset_path("/assets/2.jpg") %>
-            </div>
-            <div class="card-block col-sm-7">
-              <p>Skin Care</p>
-              <h4 class="card-title">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-              <p>by GANESH</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 each-editor">
-          <div class="card flex-row flex-wrap">
-            <div class="card-header border-0 col-sm-5">
-              <%= image_tag asset_path("/assets/1.jpg") %>
-            </div>
-            <div class="card-block col-sm-7">
-              <p>Skin Care</p>
-              <h4 class="card-title">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
-              <p>by GANESH</p>
-            </div>
-          </div>
-        </div>
-      </div>
+        <%end%>
 
     </div>
   </div>
@@ -367,79 +206,18 @@
       </div>
       <div class="row">
         <div class="row">
-          <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-              <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
-                 data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                 data-target="#image-gallery">
-                  <img class="img-thumbnail"
-                       src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                       alt="Another alt text">
-              </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-              <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
-                 data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                 data-target="#image-gallery">
-                  <img class="img-thumbnail"
-                       src="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                       alt="Another alt text">
-              </a>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-              <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
-                 data-image="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                 data-target="#image-gallery">
-                  <img class="img-thumbnail"
-                       src="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                       alt="Another alt text">
-              </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-              <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Test1"
-                 data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                 data-target="#image-gallery">
-                  <img class="img-thumbnail"
-                       src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                       alt="Another alt text">
-              </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-              <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
-                 data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                 data-target="#image-gallery">
-                  <img class="img-thumbnail"
-                       src="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                       alt="Another alt text">
-              </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-              <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
-                 data-image="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                 data-target="#image-gallery">
-                  <img class="img-thumbnail"
-                       src="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                       alt="Another alt text">
-              </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
-               data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-               data-target="#image-gallery">
-                <img class="img-thumbnail"
-                     src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                     alt="Another alt text">
-            </a>
-          </div>
-          <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
-               data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-               data-target="#image-gallery">
-                <img class="img-thumbnail"
-                     src="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                     alt="Another alt text">
-            </a>
-          </div>
+          <% EventPhoto.limit(10).each do |photo|%>
+            <% next if photo.file_path&.url.blank? %>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   data-image="<%= photo.file_path.url(:large)%>"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         src='<%= photo.file_path.url(:large)%>'
+                         alt="Another alt text">
+                </a>
+            </div>
+          <%end%>
         </div>
 
 
