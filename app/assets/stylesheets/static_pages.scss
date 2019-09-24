@@ -1,0 +1,39 @@
+//about
+
+.innerpage{
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    background-image: image-url("bg.jpg");
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    padding: 6rem 0 3rem;
+    color:#fff;
+}
+.inner-page{
+	padding-top: 8rem;
+}
+
+.element_title {
+    position: relative;
+    z-index: 1;
+	 .title {
+    position: relative;
+    z-index: 1;
+    font-family: 'BebasNeueBook', sans-serif;
+    color: #d90057;
+    font-size: 60px;
+    letter-spacing: 6px;
+    padding-left: 160px;
+    margin: 0 0 40px;
+	}
+	.sub_title {
+    position: absolute;
+    top: -52px;
+    left: 100px;
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 150px;
+    letter-spacing: 15px;
+    margin: 0;
+	}
+}
