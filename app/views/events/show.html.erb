@@ -1,15 +1,229 @@
-<div class="inner-banner">
+<div class="inner-page show_page">
+  <div class="text-center">
+    <h1><%= @event.title %></h1>
+    <h3><%= @event.starts_at %> <%= @event.ends_at %> | <%= @event.location %> | <%= @event.country %></h3>
+    <div><%= link_to 'Edit', edit_event_path(@event) %> |
+      <%= link_to 'Back', events_path %></div> 
+  </div>
+  <%= image_tag asset_path("/assets/banner.jpg") %>
+  
+  <div class="container mt-40">
+    <div class="row">
+      <div class="col-lg-8">
+        <h3 class="dancing"><%= @event.description %></h3>
+        <h4></h4>
+      </div>
+      <div class="col-lg-4">
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <div class="card">
+              <span class="fa fa-building fa-2x"> </span>
+              <p>Been Host</p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="card">
+              <span class="fa fa-building fa-2x"> </span>
+              <p>Want to Verify</p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="card">
+              <span class="fa fa-building fa-2x"> </span>
+              <p>Add to fest</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row mt-40">
+      <div class="col-md-12">
+        <div class="section_title_style2 mb-20 text-center">
+          <h2>Plan Your Fest</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-20">
+      <div class="col-md-4 text-center">
+        <div class="icon">
+          <%= image_tag asset_path("/assets/icon-4.png") %>
+        </div>
+        <h4>Offical Website</h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="icon">
+          <%= image_tag asset_path("/assets/icon-9.png") %>
+        </div>
+        <h4>Tickets & Packages</h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="icon">
+          <%= image_tag asset_path("/assets/icon-8.png") %>
+        </div>
+        <h4>Live & Dj's</h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </div>
+    </div>
+  </div>
+ 
+  <hr />
+  <div class="container">
+    <div class="row mt-40">
+      <div class="col-md-12">
+        <div class="section_title_style2 mb-20 text-center">
+          <h2>How to get there</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-20">
+      <div class="col-md-3 text-center">
+        <div class="icon">
+          <%= image_tag asset_path("/assets/icon-5.png") %>
+        </div>
+        <h4>Flights</h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </div>
+      <div class="col-md-3 text-center">
+        <div class="icon">
+          <%= image_tag asset_path("/assets/icon-11.png") %>
+        </div>
+        <h4>Trains</h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </div>
+      <div class="col-md-3 text-center">
+        <div class="icon">
+          <%= image_tag asset_path("/assets/icon-6.png") %>
+        </div>
+        <h4>Cars/Taxis</h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </div>
+      <div class="col-md-3 text-center">
+        <div class="icon">
+          <%= image_tag asset_path("/assets/icon-1.png") %>
+        </div>
+        <h4>Bus</h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row mt-40">
+      <div class="col-md-12">
+        <div class="section_title_style2 mb-20 text-center">
+          <h2>Where to Stay</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-20">
+      <div class="col-md-3 text-center">
+        <div class="icon">
+          <%= image_tag asset_path("/assets/icon-7.png") %>
+        </div>
+        <h4>Offical Packages</h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </div>
+      <div class="col-md-3 text-center">
+        <div class="icon">
+          <%= image_tag asset_path("/assets/icon-3.png") %>
+        </div>
+        <h4>Hotels</h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </div>
+      <div class="col-md-3 text-center">
+        <div class="icon">
+          <%= image_tag asset_path("/assets/icon-2.png") %>
+        </div>
+        <h4>House</h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </div>
+      <div class="col-md-3 text-center">
+        <div class="icon">
+          <%= image_tag asset_path("/assets/icon-10.png") %>
+        </div>
+        <h4>Package outside</h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row mt-40">
+      <div class="col-md-12">
+        <div class="section_title_style2 mb-20 text-center">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 main-admission">
+          <div class="admission_curosel owl-carousel curosel-style">
+            <div class="col-md-12">
+              <div class="single_admision one">
+                <div class="admission_thumb">
+                  <%= image_tag asset_path("/assets/1.jpg") %>
+                </div>
+                <div class="admission_content ">
+                  <div class="admission_content_inner">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="single_admision two">
+                <div class="admission_thumb">
+                   <%= image_tag asset_path("/assets/2.jpg") %>
+                </div>
+                <div class="admission_content">
+                  <div class="admission_content_inner">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="single_admision three">
+                <div class="admission_thumb">
+                   <%= image_tag asset_path("/assets/3.jpg") %>
+                </div>
+                <div class="admission_content">
+                  <div class="admission_content_inner">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="single_admision four">
+                <div class="admission_thumb">
+                   <%= image_tag asset_path("/assets/4.jpg") %>
+                </div>
+                <div class="admission_content">
+                  <div class="admission_content_inner">
+                  </div>
+                </div>
+              </div>
+            </div><div class="col-md-12">
+                <div class="single_admision two">
+                  <div class="admission_thumb">
+                     <%= image_tag asset_path("/assets/5.jpg") %>
+                  </div>
+                  <div class="admission_content">
+                    <div class="admission_content_inner">=
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
 
 <p>
   <strong>Icon path:</strong>
@@ -126,6 +340,5 @@
   <%= @event.bus %>
 </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+
 </div>

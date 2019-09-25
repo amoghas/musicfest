@@ -24,6 +24,7 @@
 @import "owl.carousel";
 @import "owl.transitions";
 @import "slick";
+@import "static_pages";
 
 html, body {
     font-family: Poppins;
@@ -87,7 +88,7 @@ h3.dancing{
 .main-menu{
   margin: 0;
   nav {
-    background: rgba(0,0,0,.31);
+    background: rgba(0,0,0,1);
     ul li{
       padding: 0.5rem 1rem !important;
       a{
@@ -454,14 +455,7 @@ h3.dancing{
   }
 } 
 
-.inner-page{
-    margin-right: 0px !important;
-    margin-left: 0px !important;
-    background-image: image-url("bg.jpg");
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-}
+
 
 .inner-banner{
   background-image: image-url("inner-bg.png");
@@ -474,7 +468,6 @@ h3.dancing{
     color: #fff;
   }
 }
-
 .each-event{
   padding: 1rem 1rem 0;
   border: 1px solid #ddd;
@@ -562,5 +555,34 @@ h3.dancing{
     -moz-opacity: 1;
     opacity: 1;
     filter: alpha(opacity=100);
+  }
+}
+
+// Login
+.new_user{
+    padding-top: 6rem;
+    width: 30rem;
+    margin: 0 auto;
+}
+
+.show_page{
+  .card{
+    background: #010101;
+    span{
+      color: #fff;
+    }
+    p{
+      font-size: 12px;
+      padding: 1rem 0;
+      color: #fff;
+    }
+  }
+  .icon{
+    height: 100px;
+    overflow: hidden;
+    img{
+      width: 100px;
+    }
+    padding-bottom: 1rem;
   }
 }
