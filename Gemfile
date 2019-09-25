@@ -19,6 +19,8 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'simple_form'
 gem 'rails_layout'
+gem "fog-aws"
+gem "fog"
 gem 'pg', '~> 0.18.4'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
