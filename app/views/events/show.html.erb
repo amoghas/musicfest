@@ -6,7 +6,7 @@
       <%= link_to 'Back', events_path %></div> 
   </div>
   <%= image_tag asset_path("/assets/banner.jpg") %>
-  
+
   <div class="container mt-40">
     <div class="row">
       <div class="col-lg-8">
@@ -52,6 +52,9 @@
         </div>
         <h4>Offical Website</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <% @event.event_links.packages.each do |package|%>
+          <p><%= link_to package.name , package.link , target: :_blank %></p>
+        <%end%>
       </div>
       <div class="col-md-4 text-center">
         <div class="icon">
@@ -59,6 +62,9 @@
         </div>
         <h4>Tickets & Packages</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <% @event.event_links.packages.each do |package|%>
+          <p><%= link_to package.name , package.link , target: :_blank %></p>
+        <%end%>
       </div>
       <div class="col-md-4 text-center">
         <div class="icon">
@@ -66,6 +72,9 @@
         </div>
         <h4>Live & Dj's</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <% @event.event_links.packages.each do |package|%>
+          <p><%= link_to package.name , package.link , target: :_blank %></p>
+        <%end%>
       </div>
     </div>
   </div>
@@ -86,6 +95,9 @@
         </div>
         <h4>Flights</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <% @event.event_links.packages.each do |package|%>
+          <p><%= link_to package.name , package.link , target: :_blank %></p>
+        <%end%>
       </div>
       <div class="col-md-3 text-center">
         <div class="icon">
@@ -93,6 +105,9 @@
         </div>
         <h4>Trains</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <% @event.event_links.packages.each do |package|%>
+          <p><%= link_to package.name , package.link , target: :_blank %></p>
+        <%end%>
       </div>
       <div class="col-md-3 text-center">
         <div class="icon">
@@ -100,6 +115,9 @@
         </div>
         <h4>Cars/Taxis</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <% @event.event_links.packages.each do |package|%>
+          <p><%= link_to package.name , package.link , target: :_blank %></p>
+        <%end%>
       </div>
       <div class="col-md-3 text-center">
         <div class="icon">
@@ -107,6 +125,9 @@
         </div>
         <h4>Bus</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <% @event.event_links.packages.each do |package|%>
+          <p><%= link_to package.name , package.link , target: :_blank %></p>
+        <%end%>
       </div>
     </div>
   </div>
@@ -126,6 +147,9 @@
         </div>
         <h4>Offical Packages</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <% @event.event_links.packages.each do |package|%>
+          <p><%= link_to package.name , package.link , target: :_blank %></p>
+        <%end%>
       </div>
       <div class="col-md-3 text-center">
         <div class="icon">
@@ -133,6 +157,9 @@
         </div>
         <h4>Hotels</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <% @event.event_links.packages.each do |package|%>
+          <p><%= link_to package.name , package.link , target: :_blank %></p>
+        <%end%>
       </div>
       <div class="col-md-3 text-center">
         <div class="icon">
@@ -140,6 +167,9 @@
         </div>
         <h4>House</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <% @event.event_links.packages.each do |package|%>
+          <p><%= link_to package.name , package.link , target: :_blank %></p>
+        <%end%>
       </div>
       <div class="col-md-3 text-center">
         <div class="icon">
@@ -147,6 +177,9 @@
         </div>
         <h4>Package outside</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <% @event.event_links.packages.each do |package|%>
+          <p><%= link_to package.name , package.link , target: :_blank %></p>
+        <%end%>
       </div>
     </div>
   </div>
@@ -161,10 +194,11 @@
     <div class="row">
         <div class="col-md-12 main-admission">
           <div class="admission_curosel owl-carousel curosel-style">
+          <%@event.event_photos.each do |photo|%>
             <div class="col-md-12">
               <div class="single_admision one">
                 <div class="admission_thumb">
-                  <%= image_tag asset_path("/assets/1.jpg") %>
+                  <%= image_tag photo.file_path.url(:large)  rescue ""%>
                 </div>
                 <div class="admission_content ">
                   <div class="admission_content_inner">
@@ -172,173 +206,10 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-12">
-              <div class="single_admision two">
-                <div class="admission_thumb">
-                   <%= image_tag asset_path("/assets/2.jpg") %>
-                </div>
-                <div class="admission_content">
-                  <div class="admission_content_inner">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="single_admision three">
-                <div class="admission_thumb">
-                   <%= image_tag asset_path("/assets/3.jpg") %>
-                </div>
-                <div class="admission_content">
-                  <div class="admission_content_inner">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="single_admision four">
-                <div class="admission_thumb">
-                   <%= image_tag asset_path("/assets/4.jpg") %>
-                </div>
-                <div class="admission_content">
-                  <div class="admission_content_inner">
-                  </div>
-                </div>
-              </div>
-            </div><div class="col-md-12">
-                <div class="single_admision two">
-                  <div class="admission_thumb">
-                     <%= image_tag asset_path("/assets/5.jpg") %>
-                  </div>
-                  <div class="admission_content">
-                    <div class="admission_content_inner">=
-                    </div>
-                  </div>
-                </div>
-              </div>
-            
+            <%end%>
           </div>
         </div>
       </div>
-  </div>
-</div>
-<p id="notice"><%= notice %></p>
-
-
-
-<p>
-  <strong>Icon path:</strong>
-  <%= @event.icon_path %>
-</p>
-
-<p>
-  <strong>File path:</strong>
-  <%= @event.file_path %>
-</p>
-
-<p>
-  <strong>Bg color:</strong>
-  <%= @event.bg_color %>
-</p>
-
-<p>
-  <strong>Txt color:</strong>
-  <%= @event.txt_color %>
-</p>
-
-<p>
-  <strong>Starts at:</strong>
-  <%= @event.starts_at %>
-</p>
-
-<p>
-  <strong>Ends at:</strong>
-  <%= @event.ends_at %>
-</p>
-
-<p>
-  <strong>Country:</strong>
-  <%= @event.country %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @event.location %>
-</p>
-
-<p>
-  <strong>Website:</strong>
-  <%= @event.website %>
-</p>
-
-<p>
-  <strong>Djs:</strong>
-  <%= @event.djs %>
-</p>
-
-<p>
-  <strong>Venue:</strong>
-  <%= @event.venue %>
-</p>
-
-<p>
-  <strong>Tags:</strong>
-  <%= @event.tags %>
-</p>
-
-<p>
-  <strong>Intro:</strong>
-  <%= @event.intro %>
-</p>
-
-<p>
-  <strong>Fb:</strong>
-  <%= @event.fb %>
-</p>
-
-<p>
-  <strong>Twitter:</strong>
-  <%= @event.twitter %>
-</p>
-
-<p>
-  <strong>Instagram:</strong>
-  <%= @event.instagram %>
-</p>
-
-<p>
-  <strong>Youtube:</strong>
-  <%= @event.youtube %>
-</p>
-
-<p>
-  <strong>Packages:</strong>
-  <%= @event.packages %>
-</p>
-
-<p>
-  <strong>Shop links:</strong>
-  <%= @event.shop_links %>
-</p>
-
-<p>
-  <strong>Hotels:</strong>
-  <%= @event.hotels %>
-</p>
-
-<p>
-  <strong>Flight:</strong>
-  <%= @event.flight %>
-</p>
-
-<p>
-  <strong>Train:</strong>
-  <%= @event.train %>
-</p>
-
-<p>
-  <strong>Bus:</strong>
-  <%= @event.bus %>
-</p>
-
-
+      </div>
+   </div>
 </div>

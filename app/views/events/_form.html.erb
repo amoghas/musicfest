@@ -22,6 +22,9 @@
   <%= f.input :venue %>
   <%= f.input :tags %>
   <%= f.input :intro %>
+  <%= f.input :theme %>
+  <%= f.input :editor_choice %>
+  <%= f.input :published %>
 
 <table id="event_links">
   <%= f.simple_fields_for :event_links, :wrapper => false do |link| %>
@@ -49,6 +52,7 @@
 <p><%= f.link_to_add "Add a Photo", :event_photos, :data => { :target => "#event_photos" } %></p>
 
   <div class="actions">
+  
     <%= f.submit %>
   </div>
 <% end %>
