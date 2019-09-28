@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  root :to => 'events#index', :conditions => lambda{ |req| !req.session["user_id"].blank? }
+  # root :to => 'events#index', :conditions => lambda{ |req| !req.session["user_id"].blank? }
   root to: 'pages#show', id: 'home'
   get "/pages/*id" => 'pages#show', as: :page, format: false
 

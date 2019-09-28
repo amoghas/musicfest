@@ -1,4 +1,8 @@
 class EventLink < ApplicationRecord
-  belongs_to :event, class_name: ::Event
-  enum link_type: [:shop_links, :packages, :youtube_link ,:instagram_link , :facebook_link, :hotels , :flights ,:trains ,:bus , :website]
+  belongs_to :event, class_name: ::Event ,required: false
+  enum link_type: [:official_website , :tix_package ,:lineup_djs , :flight , :trian ,  :car_taxi, :bus , :ferry_bike , :official_package  , :package_resale ,:hotles ,:hostels , :shopping_cart , :facebook ,:instagram ,:twitter]
+
+  def display_name
+    name.blank? ? link : name
+  end 
 end

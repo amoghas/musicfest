@@ -131,7 +131,10 @@
       </div>
     </div>
   </div>
-
+  <div class="seperator">
+    <span class="stripe" style="background-color:#e5059a"></span>
+    <span class="stripe" style="background-color:#ef684c"></span>
+  </div>
   <!--Editors Area -->
   <div class="editors_area">
     <div class="container-fluid">
@@ -147,7 +150,7 @@
       <div class="row">
         <% Event.editor_choice.each do |event|%>
           <% next if event.file_path.blank?%>
-          <div class="col-md-4 each-editor">
+          <div class="col-md-3 each-editor">
             <div class="card flex-row flex-wrap">
               <div class="card-header border-0 col-sm-5">
                 <%= image_tag event.file_path.url(:large)  rescue ""%>
@@ -163,7 +166,10 @@
 
     </div>
   </div>
-
+  <div class="seperator">
+    <span class="stripe" style="background-color:#e5059a"></span>
+    <span class="stripe" style="background-color:#ef684c"></span>
+  </div>
   <!--main Area -->
   <div class="main_area" style="background-image: url('images/02.png');">
     <div class="container-fluid">
@@ -181,7 +187,10 @@
       </div>
     </div>
   </div>
-
+  <div class="seperator">
+    <span class="stripe" style="background-color:#e5059a"></span>
+    <span class="stripe" style="background-color:#ef684c"></span>
+  </div>
   <!--Fest Area -->
   <div class="admision_area">
     <div class="container-fluid">

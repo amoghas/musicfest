@@ -52,8 +52,8 @@
         </div>
         <h4>Offical Website</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <% @event.event_links.packages.each do |package|%>
-          <p><%= link_to package.name , package.link , target: :_blank %></p>
+        <% @event.event_links.official_website.each do |official_website|%>
+          <p><%= link_to official_website.display_name , official_website.link , target: :_blank %></p>
         <%end%>
       </div>
       <div class="col-md-4 text-center">
@@ -62,8 +62,8 @@
         </div>
         <h4>Tickets & Packages</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <% @event.event_links.packages.each do |package|%>
-          <p><%= link_to package.name , package.link , target: :_blank %></p>
+        <% @event.event_links.tix_package.each do |tix_package|%>
+          <p><%= link_to tix_package.display_name , tix_package.link , target: :_blank %></p>
         <%end%>
       </div>
       <div class="col-md-4 text-center">
@@ -72,8 +72,8 @@
         </div>
         <h4>Live & Dj's</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <% @event.event_links.packages.each do |package|%>
-          <p><%= link_to package.name , package.link , target: :_blank %></p>
+        <% @event.event_links.lineup_djs.each do |lineup_djs|%>
+          <p><%= link_to lineup_djs.display_name , lineup_djs.link , target: :_blank %></p>
         <%end%>
       </div>
     </div>
@@ -95,8 +95,8 @@
         </div>
         <h4>Flights</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <% @event.event_links.packages.each do |package|%>
-          <p><%= link_to package.name , package.link , target: :_blank %></p>
+        <% @event.event_links.flight.each do |flight|%>
+          <p><%= link_to flight.display_name , flight.link , target: :_blank %></p>
         <%end%>
       </div>
       <div class="col-md-3 text-center">
@@ -105,8 +105,8 @@
         </div>
         <h4>Trains</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <% @event.event_links.packages.each do |package|%>
-          <p><%= link_to package.name , package.link , target: :_blank %></p>
+        <% @event.event_links.trian.each do |trian|%>
+          <p><%= link_to trian.display_name , trian.link , target: :_blank %></p>
         <%end%>
       </div>
       <div class="col-md-3 text-center">
@@ -115,8 +115,8 @@
         </div>
         <h4>Cars/Taxis</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <% @event.event_links.packages.each do |package|%>
-          <p><%= link_to package.name , package.link , target: :_blank %></p>
+        <% @event.event_links.car_taxi.each do |car_taxi|%>
+          <p><%= link_to car_taxi.display_name , car_taxi.link , target: :_blank %></p>
         <%end%>
       </div>
       <div class="col-md-3 text-center">
@@ -125,8 +125,8 @@
         </div>
         <h4>Bus</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <% @event.event_links.packages.each do |package|%>
-          <p><%= link_to package.name , package.link , target: :_blank %></p>
+        <% @event.event_links.bus.each do |bus|%>
+          <p><%= link_to bus.display_name , bus.link , target: :_blank %></p>
         <%end%>
       </div>
     </div>
@@ -147,8 +147,8 @@
         </div>
         <h4>Offical Packages</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <% @event.event_links.packages.each do |package|%>
-          <p><%= link_to package.name , package.link , target: :_blank %></p>
+        <% @event.event_links.official_package.each do |official_package|%>
+          <p><%= link_to official_package.display_name , official_package.link , target: :_blank %></p>
         <%end%>
       </div>
       <div class="col-md-3 text-center">
@@ -157,8 +157,9 @@
         </div>
         <h4>Hotels</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <% @event.event_links.packages.each do |package|%>
-          <p><%= link_to package.name , package.link , target: :_blank %></p>
+        <% @event.event_links.hotles.each do |hotel|%>
+          <p>
+          <%= link_to hotel.display_name , hotel.link , target: :_blank %></p>
         <%end%>
       </div>
       <div class="col-md-3 text-center">
@@ -167,8 +168,8 @@
         </div>
         <h4>House</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <% @event.event_links.packages.each do |package|%>
-          <p><%= link_to package.name , package.link , target: :_blank %></p>
+        <% @event.event_links.hostels.each do |hostel|%>
+          <p><%= link_to hostel.display_name , hostel.link , target: :_blank %></p>
         <%end%>
       </div>
       <div class="col-md-3 text-center">
@@ -177,8 +178,8 @@
         </div>
         <h4>Package outside</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <% @event.event_links.packages.each do |package|%>
-          <p><%= link_to package.name , package.link , target: :_blank %></p>
+        <% @event.event_links.package_resale.each do |package_resale|%>
+          <p><%= link_to package_resale.display_name , package_resale.link , target: :_blank %></p>
         <%end%>
       </div>
     </div>
