@@ -7,7 +7,7 @@ class Event < ApplicationRecord
   mount_uploader :file_path, ImageUploader
 
   scope :published, -> {
-    where(published: true).order("created_at desc")
+    where("published = ? and editor_choice  = ? " , true , false).order("created_at desc")
   }
 
   scope :editor_choice, ->{

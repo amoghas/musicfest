@@ -79,7 +79,7 @@
                   </div>
                   <div class="admission_content ">
                     <div class="admission_content_inner">
-                      <h3><%= event.title%></h3>
+                      <h3><%= link_to  event.title , event_path(event)%></h3>
                     </div>
                   </div>
                 </div>
@@ -116,7 +116,7 @@
                     <%= image_tag event.file_path.url(:large)  rescue ""%>
                   </div>
                   <div class="explore_content ">
-                    <p><%= event.title%></p>
+                    <p><%= link_to  event.title , event_path(event)%></p>
                     <h5><%= event.description%></h5>
                     <div class="details d-flex">
                       <span><%= event.djs%></span>
@@ -157,7 +157,7 @@
               </div>
               <div class="card-block col-sm-7">
                 <p>Skin Care</p>
-                <h4 class="card-title"><%= event.title%></h4>
+                <h4 class="card-title"><%= link_to  event.title , event_path(event)%></h4>
                 <p>by <%=event.djs%></p>
               </div>
             </div>
