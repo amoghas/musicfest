@@ -64,3 +64,43 @@
 .mar-0{
     margin: 0;
 }
+
+.google_map_area {
+    pointer-events: none;
+}
+
+.form_title h2 {
+    font-size: 35px;
+    padding-bottom: 32px;
+}
+.form_field {
+    width: 100%;
+    .form_field_inner, .field_comment_inner {
+        margin-bottom: 35px;
+        width: 100%;
+        input, textarea {
+            background: transparent;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            font-weight: 500;
+            height: 50px;
+            -webkit-transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+            width: 100%;
+            outline: none;
+            padding-left: 15px;
+            border-radius: 5px;
+            color:#fff;
+        }
+        textarea {
+            height: 176px;
+            padding-top: 10px;
+        }
+    }
+    label {
+        color: #fff;
+        cursor: pointer;
+        font-weight: 400;
+    }
+}
