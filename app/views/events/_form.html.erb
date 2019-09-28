@@ -10,49 +10,52 @@
       </ul>
     </div>
   <% end %>
-
-  <%= f.input :title %>
-  <%= f.input :description , as: :text %>
-  <%= f.file_field :file_path %>
-  <%= f.input :starts_at %>
-  <%= f.input :ends_at %>
-  <%= f.input :country %>
-  <%= f.input :location %>
-  <%= f.input :djs  , label: "DJ Details"%>
-  <%= f.input :venue %>
-  <%= f.input :tags %>
-  <%= f.input :intro %>
-  <%= f.input :theme %>
-  <%= f.input :editor_choice %>
-  <%= f.input :published %>
-
-<table id="event_links">
-  <%= f.simple_fields_for :event_links, :wrapper => false do |link| %>
-    <tr class="fields">
-      <td><%= link.input :name  , as: :text , label: "Link Name"%></td>
-      <td><%= link.input :description ,as: :text %></td>
-      <td><%= link.input :link , as: :text , label: "URL"%></td>
-      <td><%= link.input :link_type, :as => :select, :collection => EventLink::link_types.keys.to_a  %></td>
-      <td><%= link.link_to_remove "Remove this Link" %></td>
-    </tr>
-  <% end %>
-</table>
-<p><%= f.link_to_add "Add a Link", :event_links, :data => { :target => "#event_links" } %></p>
-
-<table id="event_photos">
-  <%= f.simple_fields_for :event_photos, :wrapper => false do |photo| %>
-    <tr class="fields">
-      <td><%= photo.input :name %></td>
-      <td><%= photo.input :description %></td>
-      <td><%= photo.file_field :file_path %></td>
-      <td><%= photo.link_to_remove "Remove this Photo" %></td>
-    </tr>
-  <% end %>
-</table>
-<p><%= f.link_to_add "Add a Photo", :event_photos, :data => { :target => "#event_photos" } %></p>
+  <div class="row">
+    <div class="col-lg-6">
+      <%= f.input :title %>
+      <%= f.input :description , as: :text %>
+      <%= f.file_field :file_path %>
+      <%= f.input :starts_at %>
+      <%= f.input :ends_at %>
+      <%= f.input :country %>
+      <%= f.input :location %>
+    </div>
+    <div class="col-lg-6">
+      <%= f.input :djs  , label: "DJ Details"%>
+      <%= f.input :venue %>
+      <%= f.input :tags %>
+      <%= f.input :intro %>
+      <%= f.input :theme %>
+      <%= f.input :editor_choice %>
+      <%= f.input :published %>
+    </div>
+  </div>
+  <%= f.link_to_add "Add a Link", :event_links, :data => { :target => "#event_links" }, class: "link" %>
+  <table id="event_links" class="table">
+    <%= f.simple_fields_for :event_links, :wrapper => false do |link| %>
+      <tr class="fields">
+        <td><%= link.input :name  , as: :text , label: "Link Name"%></td>
+        <td><%= link.input :description ,as: :text %></td>
+        <td><%= link.input :link , as: :text , label: "URL"%></td>
+        <td><%= link.input :link_type, :as => :select, :collection => EventLink::link_types.keys.to_a  %></td>
+        <td><%= link.link_to_remove "Remove this Link", class: "btn" %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= f.link_to_add "Add a Photo", :event_photos, :data => { :target => "#event_photos" }, class: "link" %>
+  <table id="event_photos" class="table">
+    <%= f.simple_fields_for :event_photos, :wrapper => false do |photo| %>
+      <tr class="fields">
+        <td><%= photo.input :name %></td>
+        <td><%= photo.input :description %></td>
+        <td><%= photo.file_field :file_path %></td>
+        <td><%= photo.link_to_remove "Remove this Photo", class: "btn" %></td>
+      </tr>
+    <% end %>
+  </table>
 
   <div class="actions">
   
-    <%= f.submit %>
+    <%= f.submit class: "btn-book"%>
   </div>
 <% end %>
