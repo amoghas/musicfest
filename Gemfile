@@ -10,6 +10,7 @@ end
 gem 'rails', '~> 5.0.7', '>= 5.0.7.2'
 gem "nested_form"
 gem 'country_select'
+gem 'kaminari'
 # Use sqlite3 as the database for Active Record
 gem 'mysql2', '~> 0.5.2'
 gem 'carrierwave', '~> 0.10.0'

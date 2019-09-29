@@ -1,3 +1,4 @@
+
 <div class="inner-banner">
   <div class="container">
     <div class="row">
@@ -33,6 +34,7 @@
 
 <div class="container-fluid">
   <div class="row">
+  <%= paginate @events %>
     <% @events.each do |event|%>
       <div class="col-sm-3">
         <div class="each-event">

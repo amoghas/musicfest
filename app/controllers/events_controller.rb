@@ -9,7 +9,7 @@ class EventsController < ApplicationController
   end
 
   def public_view
-    @events = Event.all
+    @events = Event.all.page(params[:page]).per(15)
   end
 
   # GET /events/1
