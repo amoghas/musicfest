@@ -14,7 +14,7 @@
  *= require_self
  */
 
-
+@import "font-awesome";
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
@@ -346,6 +346,19 @@ h3.dancing{
     -moz-box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
 }
+.btn-border-white{
+  border: 1px solid #fff;
+  padding: 0.2rem 1rem;
+  display: inline-block;
+  font-size: 0.8rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  transition: all 0.25s;
+  border-radius: 0;
+  &:hover{
+    background: #fff;
+  }
+}
 .btn.btn-white {
     background: #ffffff;
     color: #111121;
@@ -355,9 +368,6 @@ h3.dancing{
     background: #222;
     padding: 2rem 0px 0px 0px;
     .col-md-6{
-      width: 100%;
-      flex: 0 0 100%;
-      max-width: 100%;
       ul{
         li{
           float: left;
@@ -376,12 +386,11 @@ h3.dancing{
     font-size: 13px;
     font-weight: 400;
 }
-.footer-middle .social-links-footer {
-    margin-top: 25px;
-}
+
 .footer-middle .social-links-footer li {
     display: inline-block;
     margin-right: 15px;
+    float: none !important;
 }
 .footer-middle .social-links-footer a {
     color: #fff;
@@ -486,41 +495,43 @@ h3.dancing{
   }
 }
 .each-event{
-  padding: 1rem 1rem 0;
+  flex: 0 0 20.777%;
+  max-width: 20.777%;
+  margin: 1rem 2.1982rem;;
   border: 1px solid #ddd;
-  margin-bottom: 2rem;
   .event_thumb{
     background: #f3f3f3;
+    height: 405px;
+    overflow:hidden;
     img{
-      max-height: 240px;
+      width: 100%;
     }
   }
-}
-
-.event_content{
-  padding: 0.5rem 0;
-  h5{
-    font-size: 1rem;
-  }
-  .details{
-    color: #666;
-    font-size: 0.7rem;
+  .event_content{
+    padding: 1rem;
+    h5{
+      font-size: 1rem;
+    }
+    .details{
+      color: #666;
+      font-size: 0.7rem;
+    }
   }
 }
 
 .btn-book{
-    border: 1px solid #000;
-    padding: 0.2rem 1rem;
-    display: inline-block;
-    font-size: 0.8rem;
-    color: #000;
-    margin-bottom: 0.5rem;
-    transition: all 0.25s;
-    &:hover{
-      background: red;
-      color:#fff;
-    }
+  border: 1px solid #000;
+  padding: 0.2rem 1rem;
+  display: inline-block;
+  font-size: 0.8rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+  transition: all 0.25s;
+  &:hover{
+    background: red;
+    color:#fff;
   }
+}
 
 .search-form {
   position: relative;

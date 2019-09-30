@@ -1,6 +1,25 @@
-<h1>Editing Event</h1>
+<div class="inner-banner">
+  <div class="container">
+    <div class="row">
+      <div class="text col-lg-9">
+        <h2>Editing Event</h2>
+        <h3 class="dancing">Almost before we knew</h3>
+      </div>
+      <div class="col-lg-3 text-right">
+      	<%= link_to 'Show', @event, class: "btn btn-border-white" %>
+        <%= link_to 'Back', events_path, class: "btn btn-border-white" %>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="inner-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <%= render 'form', event: @event %>
+      </div>
+    </div>
+  </div>
+</section>
 
-<%= render 'form', event: @event %>
 
-<%= link_to 'Show', @event %> |
-<%= link_to 'Back', events_path %>

@@ -71,17 +71,13 @@
         <div class="col-md-12 main-admission">
           <div class="admission_curosel owl-carousel curosel-style">
             <% Event.published.each do |event|%>
-               <% next if event.file_path.blank?%>
-              <div class="col-md-12">
-                <div class="single_admision one">
-                  <div class="admission_thumb">
-                    <%= image_tag event.file_path.url(:large)  rescue ""%>
-                  </div>
-                  <div class="admission_content ">
-                    <div class="admission_content_inner">
-                      <h3><%= link_to  event.title , event_path(event)%></h3>
-                    </div>
-                  </div>
+              <% next if event.file_path.blank?%>
+              <div class="each-event">
+                <div class="event_thumb text-center">
+                  <%= image_tag event.file_path.url(:large) rescue ""%>
+                </div>
+                <div class="event_content text-center">
+                  <h5><%= link_to  event.title , event_path(event)%></h5>
                 </div>
               </div>
             <%end%>
@@ -110,18 +106,15 @@
           <div class="admission_curosel owl-carousel curosel-style">
             <% Event.published.each do |event|%>
               <% next if event.file_path.blank?%>
-              <div class="col-md-12">
-                <div class="single_explore one">
-                  <div class="admission_thumb">
-                    <%= image_tag event.file_path.url(:large)  rescue ""%>
-                  </div>
-                  <div class="explore_content ">
-                    <p><%= link_to  event.title , event_path(event)%></p>
-                    <h5><%= event.description%></h5>
-                    <div class="details d-flex">
-                      <span><%= event.djs%></span>
-                      <span class="ml-auto">2hrs ago</span>
-                    </div>
+              <div class="each-event">
+                <div class="event_thumb text-center">
+                  <%= image_tag event.file_path.url(:large) rescue ""%>
+                </div>
+                <div class="event_content text-center">
+                  <h5><%= link_to  event.title , event_path(event)%></h5>
+                  <div class="details d-flex">
+                    <span><%= event.djs%></span>
+                    <span class="ml-auto">2hrs ago</span>
                   </div>
                 </div>
               </div>
@@ -152,10 +145,10 @@
           <% next if event.file_path.blank?%>
           <div class="col-md-3 each-editor">
             <div class="card flex-row flex-wrap">
-              <div class="card-header border-0 col-sm-5">
+              <div class="card-header border-0 col-sm-4">
                 <%= image_tag event.file_path.url(:large)  rescue ""%>
               </div>
-              <div class="card-block col-sm-7">
+              <div class="card-block col-sm-8">
                 <p>Skin Care</p>
                 <h4 class="card-title"><%= link_to  event.title , event_path(event)%></h4>
                 <p>by <%=event.djs%></p>
