@@ -14,5 +14,13 @@ class Event < ApplicationRecord
     where(editor_choice: true).order("created_at desc")
   }
 
+  scope :simple_search, ->(q){
+    where("title like ?  or description like ? " , "%#{q}%" , "%#{q}%")
+  }
+
+  scope :advance_search, ->(q){
+    
+  }
+
 
 end

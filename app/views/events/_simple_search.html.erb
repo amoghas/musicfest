@@ -1,0 +1,24 @@
+<%=simple_form_for :simple_search, method: :get, remote: true do |f|%>
+  <%= f.input :id, as: :string  , label: false%>
+  <div id="suggesstion-box"></div>
+  <%= link_to "Get", "#", class: "btn btn-default"%>
+<% end %>
+
+
+
+<script>
+$(document).ready(function(){
+  $("#simple_search_id").keyup(function(){
+    $.ajax({
+    type: "GET",
+    url: '<%= simple_search_events_path %>',
+    data:'q='+$(this).val()
+    });
+  });
+});
+//To select country name
+function selectCountry(val) {
+$("#simple_search_id").val(val);
+$("#suggesstion-box").hide();
+}
+</script>

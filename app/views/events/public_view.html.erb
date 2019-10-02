@@ -1,3 +1,4 @@
+
 <div class="inner-banner">
   <div class="container">
     <div class="row">
@@ -5,51 +6,16 @@
         <h2>All Events</h2>
         <h3 class="dancing">Almost before we knew</h3>
       </div>
-      <div class="col-lg-6">
-        <form action="#" method="get" class="search-form ">
-        <div class="search-input-env">
-          <input type="text" class="form-control search-input" name="s" placeholder="Search..." value="">
-        </div>
-          <a href="#" class="search-btn">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
-
-            <path id="search-svg" d="M460.355,421.59L353.844,315.078c20.041-27.553,31.885-61.437,31.885-98.037
-
-              C385.729,124.934,310.793,50,218.686,50C126.58,50,51.645,124.934,51.645,217.041c0,92.106,74.936,167.041,167.041,167.041
-
-              c34.912,0,67.352-10.773,94.184-29.158L419.945,462L460.355,421.59z M100.631,217.041c0-65.096,52.959-118.056,118.055-118.056
-
-              c65.098,0,118.057,52.959,118.057,118.056c0,65.096-52.959,118.056-118.057,118.056C153.59,335.097,100.631,282.137,100.631,217.041
-
-              z"></path>
-            </svg>
-            <span class="sr-only">Search</span>
-          </a>
-        </form>
+      <div  class="search">
+        <%= render "simple_search"%>
+        
       </div>
     </div>
   </div>
 </div>
-
-<div class="container-fluid">
-  <div class="row">
-    <% @events.each do |event|%>
-      <div class="col-sm-3">
-        <div class="each-event">
-          <div class="event_thumb">
-            <%= image_tag event.file_path.url(:large)  rescue ""%>
-          </div>
-          <div class="event_content text-center">
-            <h5><%=event.title%></h5>
-            <%= link_to "View More" , event_path(event) ,class: "btn-book"%>
-            <div class="details d-flex">
-              <span><%= event.djs%></span>
-              <span class="ml-auto"><%= event.starts_at%></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    <%end%>
-  </div>
+<%= paginate @events %>
+<div class="container-fluid event_list">
+  <%= render "event_list"%>
 </div>
+
 
