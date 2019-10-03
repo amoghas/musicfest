@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190918101818) do
+ActiveRecord::Schema.define(version: 20191003044430) do
 
   create_table "event_links", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string  "name"
@@ -29,32 +29,28 @@ ActiveRecord::Schema.define(version: 20190918101818) do
 
   create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "title"
-    t.text     "description", limit: 65535
+    t.text     "description",   limit: 65535
     t.string   "icon_path"
     t.string   "file_path"
-    t.string   "bg_color"
-    t.string   "txt_color"
     t.datetime "starts_at"
     t.datetime "ends_at"
     t.string   "country"
     t.string   "location"
-    t.string   "website"
     t.string   "djs"
     t.string   "venue"
     t.string   "tags"
     t.string   "intro"
-    t.string   "fb"
-    t.string   "twitter"
-    t.string   "instagram"
-    t.string   "youtube"
-    t.string   "packages"
-    t.string   "shop_links"
-    t.string   "hotels"
-    t.string   "flight"
-    t.string   "train"
-    t.string   "bus"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.boolean  "editor_choice"
+    t.boolean  "published"
+    t.integer  "theme_id"
+  end
+
+  create_table "themes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string   "tittle"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|

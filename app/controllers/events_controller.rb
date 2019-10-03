@@ -9,7 +9,7 @@ class EventsController < ApplicationController
   end
 
   def public_view
-    @events = Event.all.page(params[:page]).per(20)
+    @events = Event.published.page(params[:page]).per(20)
   end
 
 
@@ -88,20 +88,17 @@ class EventsController < ApplicationController
             :description, 
             :icon_path, 
             :file_path, 
-            :bg_color, 
-            :txt_color, 
             :starts_at, 
             :ends_at, 
             :country, 
             :location, 
-            :website, 
             :djs, 
             :venue, 
             :tags, 
             :intro,
             :editor_choice,
             :published,
-            :theme, 
+            :theme_id, 
             event_links_attributes: 
               [:id, :name, :description, :link, :link_type,  :_destroy], 
             event_photos_attributes: 

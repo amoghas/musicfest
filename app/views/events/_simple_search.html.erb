@@ -1,7 +1,5 @@
 <%=simple_form_for :simple_search, method: :get, remote: true do |f|%>
   <%= f.input :id, as: :string  , label: false%>
-  <div id="suggesstion-box"></div>
-  <%= link_to "Get", "#", class: "btn btn-default"%>
 <% end %>
 
 
@@ -16,9 +14,4 @@ $(document).ready(function(){
     });
   });
 });
-//To select country name
-function selectCountry(val) {
-$("#simple_search_id").val(val);
-$("#suggesstion-box").hide();
-}
 </script>
