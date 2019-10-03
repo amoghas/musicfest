@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     collection do
        get "public_view" => 'events#public_view' 
        get "simple_search"
+       get "adv_search"
     end
   end
   devise_for :users do  

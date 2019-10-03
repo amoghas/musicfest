@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
-  skip_before_filter :authenticate_user!, :only => [:public_view , :show ,:simple_search]
+  skip_before_filter :authenticate_user!, :only => [:public_view , :show ,:simple_search ,:adv_search]
 
   # GET /events
   # GET /events.json
@@ -25,6 +25,16 @@ class EventsController < ApplicationController
     @events = Event.simple_search(params[:q])
     respond_to do |format|
       format.js {}
+    end
+    
+  end
+
+
+  def adv_search
+    @events = Event.adv_search(params[:adv_search])
+    respond_to do |format|
+      format.js {}
+      format.html { redirect_to public_view_events_path}
     end
     
   end

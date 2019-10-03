@@ -27,10 +27,13 @@ class Event < ApplicationRecord
   }
 
   scope :simple_search, ->(q){
-    where("title like ?  or description like ? " , "%#{q}%" , "%#{q}%")
+    where("title like ?  or description like ? or djs like ? " , "%#{q}%" ,"%#{q}%" , "%#{q}%")
   }
 
-  scope :advance_search, ->(q){
+  scope :adv_search, ->(q){
+    unless q[:country].blank?
+      where(country: q[:country])
+    end
     
   }
 
