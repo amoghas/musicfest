@@ -24,9 +24,9 @@
     <%= f.simple_fields_for :event_links, :wrapper => false do |link| %>
       <tr class="fields">
         <td><%= link.input :name  , as: :text , label: "Link Name"%></td>
-        <td><%= link.input :description ,as: :text %></td>
         <td><%= link.input :link , as: :text , label: "URL"%></td>
-        <td><%= link.input :link_type, :as => :select, :collection => EventLink::link_types.keys.to_a  %></td>
+        <td><%= link.input :link_type, :as => :select, :collection => EventLink::link_types.keys.map{|t| [t.humanize , t] }  %></td>
+        <td><%= link.input :file_path ,as: :file  , label: false%></td>
         <td><%= link.link_to_remove "Remove this Link", class: "btn" %></td>
       </tr>
     <% end %>
@@ -35,9 +35,9 @@
   <table id="event_photos" class="table">
     <%= f.simple_fields_for :event_photos, :wrapper => false do |photo| %>
       <tr class="fields">
-        <td><%= photo.input :name %></td>
-        <td><%= photo.input :description %></td>
-        <td><%= photo.file_field :file_path %></td>
+        <td><%= photo.input :name  , as: :text%></td>
+        <td><%= photo.input :description , as: :text %></td>
+        <td><%= photo.input :file_path , as: :file  , label: false%></td>
         <td><%= photo.link_to_remove "Remove this Photo", class: "btn" %></td>
       </tr>
     <% end %>

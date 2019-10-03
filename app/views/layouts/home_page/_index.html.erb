@@ -112,7 +112,7 @@
                   <h5><%= link_to  event.title , event_path(event)%></h5>
                   <div class="details d-flex">
                     <span><%= event.djs%></span>
-                    <span class="ml-auto"><%= "#{event.time_ago_in_words(Event.first.starts_at)} ago" %></span>
+                    <span class="ml-auto"><%= "#{time_ago_in_words(event.starts_at)} ago" %></span>
                   </div>
                 </div>
               </div>
