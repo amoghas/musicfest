@@ -40,7 +40,7 @@
           </div>
         <%end%>
         <div class="col-md-12 text-right">
-          <a href="#" class="btn-book">View More</a>
+        <%= link_to "View More" , public_view_events_path(type: "upcoming_fests") , class: "btn-book"%>
         </div>
       </div>
     </div>
@@ -76,7 +76,7 @@
           </div>
         <%end%>
         <div class="col-md-12 text-right">
-          <a href="#" class="btn-book">View More</a>
+        <%= link_to "View More" , public_view_events_path(type: "themed_fests"), class: "btn-book"%>
         </div>
       </div>
     </div>

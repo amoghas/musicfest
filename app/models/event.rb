@@ -1,7 +1,7 @@
 class Event < ApplicationRecord
   has_many :event_links ,:dependent => :destroy
   has_many :event_photos ,:dependent => :destroy
-  belongs_to :theme
+  belongs_to :theme , required: false
 
   validates :title, :description, :djs , :location , :country,:file_path ,  presence: true
 

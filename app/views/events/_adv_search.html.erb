@@ -1,0 +1,45 @@
+<div class="view-container">
+  <div class="view-header">
+    <div class="view-title">
+      
+    </div>
+  </div>
+
+  <%= simple_form_for :adv_search,
+                      url: adv_search_events_path,
+                      method: "GET",
+                      html: { id: "advance_search" } do |f| %>
+    <div class="row">
+      <div class="col-md-6">
+        <%= f.input :country, collection: ISO3166::Country.all_names_with_codes,  as: :select, 
+                    required: false,
+                    input_html: { class: "search_field" } ,label: false ,
+                     prompt:  'All Locations' %>
+      </div>
+
+      <div class="col-md-6">
+        <%= f.input :month, collection: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],  as: :select, 
+                    required: false,
+                    input_html: { class: "search_field" } , label: false ,
+                     prompt:  'All Months' %>
+      </div>
+      <div class="col-md-6">
+        <%= f.input :genres , 
+                    required: false,
+                    input_html: { class: "search_field" } , label: false ,
+                     prompt:  'All Genres' %>
+      </div>
+      <div class="col-md-6">
+        <%= f.input :theme, collection: Theme.all.map{|t| [t.tittle ,t.id]},  as: :select, 
+                    required: false,
+                    input_html: { class: "search_field" } , label: false ,
+                     prompt:  'All Types' %>
+      </div>
+    </div>
+
+    <div class="view-actions">
+    <%= f.submit  "Search"%>
+    </div>
+  <% end %>
+</div>
+
