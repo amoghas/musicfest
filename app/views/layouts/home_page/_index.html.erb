@@ -23,26 +23,24 @@
       <div class="row">
         <div class="col-md-12">
           <div class="section_title_style2 mb-20 text-center">
-            <h3 class="dancing">Almost before we knew</h3>
             <h2>Upcoming Fests</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <p>Do you have your next destination planned?<br/>Include one of our upcoming fests to your itinerary to make your trip more memorable!</p>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12 main-admission">
-          <div class="admission_curosel owl-carousel curosel-style">
-            <% Event.upcoming_fests.each do |event|%>
-              <div class="each-event">
-                <div class="event_thumb text-center">
-                  <%= image_tag event.file_path.url(:large) rescue ""%>
-                </div>
-                <div class="event_content text-center">
-                  <h5><%= link_to  event.title , event_path(event)%></h5>
-                </div>
-              </div>
-            <%end%>
+        <% Event.upcoming_fests.each do |event|%>
+          <div class="each-event">
+            <div class="event_thumb text-center">
+              <%= image_tag event.file_path.url(:large) rescue ""%>
+            </div>
+            <div class="event_content text-center">
+              <h5><%= link_to  event.title , event_path(event)%></h5>
+            </div>
           </div>
+        <%end%>
+        <div class="col-md-12 text-right">
+          <a href="#" class="btn-book">View More</a>
         </div>
       </div>
     </div>
@@ -57,29 +55,28 @@
       <div class="row">
         <div class="col-md-12">
           <div class="section_title_style2 mb-20 text-center">
-            <h3 class="dancing">Almost before we knew</h3>
             <h2>Explore Fests</h2>
+            <p>Looking for something specific to suit your tastes and interests?<br/>Explore our handpicked festivals to find something truly unique.</p>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12 main-admission">
-          <div class="admission_curosel owl-carousel curosel-style">
-            <% Event.themed_fests.each do |event|%>
-              <div class="each-event">
-                <div class="event_thumb text-center">
-                  <%= image_tag event.file_path.url(:large) rescue ""%>
-                </div>
-                <div class="event_content text-center">
-                  <h5><%= link_to  event.title , public_view_events_path( theme_id: event.theme_id)%></h5>
-                  <div class="details d-flex">
-                    <span><%= event.djs%></span>
-                    <span class="ml-auto"><%= "#{time_ago_in_words(event.starts_at)} ago" %></span>
-                  </div>
-                </div>
+        <% Event.themed_fests.each do |event|%>
+          <div class="each-event">
+            <div class="event_thumb text-center">
+              <%= image_tag event.file_path.url(:large) rescue ""%>
+            </div>
+            <div class="event_content text-center">
+              <h5><%= link_to  event.title , public_view_events_path( theme_id: event.theme_id)%></h5>
+              <div class="details d-flex">
+                <span><%= event.djs%></span>
+                <span class="ml-auto"><%= "#{time_ago_in_words(event.starts_at)} ago" %></span>
               </div>
-            <%end%>
+            </div>
           </div>
+        <%end%>
+        <div class="col-md-12 text-right">
+          <a href="#" class="btn-book">View More</a>
         </div>
       </div>
     </div>
@@ -94,7 +91,6 @@
       <div class="row">
         <div class="col-md-12">
           <div class="section_title_style2 mb-20 text-center">
-            <h3 class="dancing">Almost before we knew</h3>
             <h2>Editors Choice</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
           </div>
@@ -105,10 +101,10 @@
           <% next if event.file_path.blank?%>
           <div class="col-md-3 each-editor">
             <div class="card flex-row flex-wrap">
-              <div class="card-header border-0 col-sm-4">
+              <div class="card-header border-0 col-sm-3">
                 <%= image_tag event.file_path.url(:large)  rescue ""%>
               </div>
-              <div class="card-block col-sm-8">
+              <div class="card-block col-sm-9">
                 <p>Skin Care</p>
                 <h4 class="card-title"><%= link_to  event.title , event_path(event)%></h4>
                 <p>by <%=event.djs%></p>
@@ -126,6 +122,17 @@
   <!--main Area -->
   <div class="main_area" style="background-image: url('images/02.png');">
     <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section_title_style2 mb-20 text-center">
+            <h2>How it works</h2>
+            <p>We are working hard to create a one-stop-shop for music festivals.
+
+Our goal? To create a community of fests lovers and
+
+empower them to discover and choose their next fest through greater convenience and confidence.</p>
+        </div>
+      </div>
       <div class="row wwf-breadcrumb">
         <div class="type-1">
           <h3>Discovery</h3>
@@ -150,10 +157,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="section_title_style2 mb-20 text-center">
-            <h3 class="dancing">Almost before we knew</h3>
             <h2>Fest Photos</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-          </div>
         </div>
       </div>
       <div class="row">

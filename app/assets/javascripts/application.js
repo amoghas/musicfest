@@ -33,34 +33,6 @@ $(document).ready(function(){
         }
     });
 
-    $('.admission_curosel').owlCarousel({
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 10000,
-        dots: false,
-        nav: true,
-        navText: ["<i class='fa fa-arrow-left''></i>", "<i class='fa fa-arrow-right''></i>"],
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                items: 2
-            },
-            992: {
-                items: 2
-            },
-            1000: {
-                items: 4
-            },
-            1920: {
-                items: 4
-            }
-        }
-    })	
-    new WOW().init();
-
-
     // gallery
     loadGallery(true, 'a.thumbnail');
 
