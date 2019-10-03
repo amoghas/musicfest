@@ -3,16 +3,15 @@
 .innerpage{
     margin-right: 0px !important;
     margin-left: 0px !important;
-    background-image: image-url("bg.jpg");
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
     padding: 10rem 0 3rem;
-    color:#fff;
     &.about{
         p{
-            color:#fff;
             margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.8rem;
         }
         h3{
             margin:1rem 0;
@@ -26,8 +25,10 @@
     padding: 3rem 15rem;
     text-align: center;
     margin-bottom: 5rem;
+    color: #fff;
     p{
         margin-bottom: 0 !important;
+        color: #fff;
     }
 }
 .inner-page{
@@ -51,7 +52,7 @@
     position: absolute;
     top: -52px;
     left: 100px;
-    color: rgba(255, 255, 255, 0.15);
+    color: rgba(0, 0, 0, 0.15);
     font-size: 150px;
     letter-spacing: 15px;
     margin: 0;
