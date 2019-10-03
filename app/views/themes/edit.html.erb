@@ -1,6 +1,22 @@
-<h1>Editing Theme</h1>
-
-<%= render 'form', theme: @theme %>
-
-<%= link_to 'Show', @theme %> |
-<%= link_to 'Back', themes_path %>
+<div class="inner-banner">
+  <div class="container">
+    <div class="row">
+      <div class="text col-lg-9">
+        <h2>Editing Theme</h2>
+        <h3 class="dancing">Almost before we knew</h3>
+      </div>
+      <div class="col-lg-3 text-right">
+        <%= link_to 'Back', themes_path, class: "btn btn-warning" %>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="inner-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <%= render 'form', theme: @theme %>
+      </div>
+    </div>
+  </div>
+</section>
