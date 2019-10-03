@@ -19,8 +19,7 @@ class Event < ApplicationRecord
   }
 
   scope :themed_fests, -> {
-     where("published = ? and editor_choice  = ? and theme_id is not null " , true , false).order("created_at desc")
-
+     where("id IN ( SELECT MAX(id)  FROM events where published = true   GROUP BY theme_id)  and theme_id is not null")
   }
 
   scope :editor_choice, ->{

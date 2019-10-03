@@ -9,7 +9,15 @@ class EventsController < ApplicationController
   end
 
   def public_view
-    @events = Event.published.page(params[:page]).per(20)
+    if params[:theme_id].blank?
+      @events = Event.published.page(params[:page]).per(20)
+      @header = "All Events"
+    else
+      @theme = Theme.find(params[:theme_id].to_i)
+      @header = "#{@theme.tittle}  Events"
+      @events = Event.published.where(theme_id: params[:theme_id]).order("created_at desc").page(params[:page]).per(20)
+    end
+    
   end
 
 

@@ -109,7 +109,7 @@
                   <%= image_tag event.file_path.url(:large) rescue ""%>
                 </div>
                 <div class="event_content text-center">
-                  <h5><%= link_to  event.title , event_path(event)%></h5>
+                  <h5><%= link_to  event.title , public_view_events_path( theme_id: event.theme_id)%></h5>
                   <div class="details d-flex">
                     <span><%= event.djs%></span>
                     <span class="ml-auto"><%= "#{time_ago_in_words(event.starts_at)} ago" %></span>
