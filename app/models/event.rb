@@ -34,7 +34,7 @@ class Event < ApplicationRecord
     scope = self.published
     scope = scope.where("title like (?)" ,"%#{q[:title]}%")  unless q[:title].blank?
     scope = scope.where("genres like (?)" ,"%#{q[:genres]}%")  unless q[:genres].blank?
-    scope = scope.where("EXTRACT(MONTH FROM TIMESTAMP 'starts_at') = ?" ,"#{q[:month].to_i}")  unless q[:month].blank?
+    scope = scope.where("EXTRACT(MONTH FROM  starts_at) = ?" ,"#{q[:month].to_i}")  unless q[:month].blank?
     unless q[:country].blank?
       country_codes = ISO3166::Country.all_names_with_codes.select{|k , v| v.include?("M")}.collect{|k | k.last}
       scope = scope.where(country: country_codes) unless country_codes.blank?
