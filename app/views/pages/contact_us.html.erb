@@ -1,45 +1,48 @@
-<section class="innerpage about">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-5">
-				<div class="em_contact_form">
-                    <form action="contact.php">
-                        <div class="contact_form_inner">
-                            <div class="form_field">
-                                <div class="form_field_inner">
-                                    <label for="name">Your Name*</label>
-                                    <input type="text" name="name">									
-                                </div>
-                                <div class="form_field_inner">
-                                    <label for="email">Email*</label>
-                                    <input type="email" name="email">									
-                                </div>
-                                <div class="form_field_inner">
-                                    <label for="number">Phone*</label>
-                                    <input type="number" name="number">									
-                                </div>
-                                <div class="form_field_comment">
-                                    
-                                    <div class="field_comment_inner">
-                                        <label for="email">Comments*</label>
-                                        <textarea name="comments"></textarea>
-                                    </div>
-                                </div>
+<section class="innerpage">
+  <div class="contact-banner">
+    <%= image_tag asset_path("assets/contact_us.jpg") %>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="em_contact_form">
+            <form action="contact.php">
+                <div class="contact_form_inner">
+                    <div class="form_field">
+                        <div class="form_field_inner">
+                            <label for="name">Your Name*</label>
+                            <input type="text" name="name">                 
+                        </div>
+                        <div class="form_field_inner">
+                            <label for="email">Email*</label>
+                            <input type="email" name="email">                 
+                        </div>
+                        <div class="form_field_inner">
+                            <label for="number">Phone*</label>
+                            <input type="number" name="number">                 
+                        </div>
+                        <div class="form_field_comment">
+                            
+                            <div class="field_comment_inner">
+                                <label for="email">Comments*</label>
+                                <textarea name="comments"></textarea>
                             </div>
                         </div>
-                        <div class="contact_bnt">
-                            <button name="submit" class="btn btn-success">Send Message</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
-			</div>
-			<div class="col-lg-7">
-				<div class="element_title">
-				    <h3 class="title">Hiya! Contact to WorldWide Fests!</h3>
-				    <h2 class="sub_title">Contact</h2>
-			   	</div>
-			   	
-			</div>
-		</div>
-	</div>
+                <div class="contact_bnt">
+                    <button name="submit" class="btn btn-book">Send Message</button>
+                </div>
+            </form>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="element_title">
+            <h3 class="title">Hiya! Contact to WorldWide Fests!</h3>
+            <h2 class="sub_title">Contact</h2>
+          </div>
+          
+      </div>
+    </div>
+  </div>
 </section>

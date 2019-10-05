@@ -6,15 +6,16 @@
         <h2><%= @header %></h2>
         <h3 class="dancing">Almost before we knew</h3>
       </div>
-      <div  class="search">
-        <%= render "simple_search"%>
-        
+      <div class="col-lg-6">
+        <div  class="search">
+          <%= render "simple_search"%>
+        </div>
       </div>
     </div>
   </div>
 </div>
 <%= paginate @events %>
-<div class="container-fluid event_list">
+<div class="container event_list">
   <%= render "event_list"%>
 </div>
 

@@ -22,7 +22,7 @@
   </div>
   <!--Admission Area -->
   <div class="admision_area">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="section_title_style2 mb-20 text-center">
@@ -33,12 +33,14 @@
       </div>
       <div class="row">
         <% Event.upcoming_fests.limit(3).each do |event|%>
-          <div class="each-event">
-            <div class="event_thumb text-center">
-              <%= image_tag event.file_path.url(:large) rescue ""%>
-            </div>
-            <div class="event_content text-center">
-              <h5><%= link_to  event.title , event_path(event)%></h5>
+          <div class="col-lg-4">
+            <div class="each-event">
+              <div class="event_thumb text-center">
+                <%= image_tag event.file_path.url(:large) rescue ""%>
+              </div>
+              <div class="event_content text-center">
+                <h5><%= link_to  event.title , event_path(event)%></h5>
+              </div>
             </div>
           </div>
         <%end%>
@@ -54,7 +56,7 @@
   </div>
   <!--Explore Area -->
   <div class="explore_area">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="section_title_style2 mb-20 text-center">
@@ -65,15 +67,17 @@
       </div>
       <div class="row">
         <% Event.themed_fests.limit(3).each do |event|%>
-          <div class="each-event">
-            <div class="event_thumb text-center">
-              <%= image_tag event.file_path.url(:large) rescue ""%>
-            </div>
-            <div class="event_content text-center">
-              <h5><%= link_to  event.title , public_view_events_path( theme_id: event.theme_id)%></h5>
-              <div class="details d-flex">
-                <span><%= event.djs%></span>
-                <span class="ml-auto"><%= "#{time_ago_in_words(event.starts_at)} ago" %></span>
+          <div class="col-lg-4">
+            <div class="each-event">
+              <div class="event_thumb_rect text-center">
+                <%= image_tag event.file_path.url(:large) rescue ""%>
+              </div>
+              <div class="event_content text-center">
+                <h5><%= link_to  event.title , public_view_events_path( theme_id: event.theme_id)%></h5>
+                <div class="details d-flex">
+                  <span><%= event.djs%></span>
+                  <span class="ml-auto"><%= "#{time_ago_in_words(event.starts_at)} ago" %></span>
+                </div>
               </div>
             </div>
           </div>
@@ -89,7 +93,7 @@
   </div>
   <!--Editors Area -->
   <div class="editors_area">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="section_title_style2 mb-20 text-center">
@@ -101,7 +105,7 @@
       <div class="row">
         <% Event.editor_choice.each do |event|%>
           <% next if event.file_path.blank?%>
-          <div class="col-md-3 each-editor">
+          <div class="col-md-4 each-editor">
             <div class="card flex-row flex-wrap">
               <div class="card-header border-0 col-sm-3">
                 <%= image_tag event.file_path.url(:large)  rescue ""%>
@@ -151,7 +155,7 @@ empower them to discover and choose their next fest through greater convenience 
   </div>
   <!--Fest Area -->
   <div class="admision_area">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="section_title_style2 mb-20 text-center">
