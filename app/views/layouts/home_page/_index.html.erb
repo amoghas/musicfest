@@ -32,7 +32,7 @@
         </div>
       </div>
       <div class="row">
-        <% Event.upcoming_fests.each do |event|%>
+        <% Event.upcoming_fests.limit(3).each do |event|%>
           <div class="each-event">
             <div class="event_thumb text-center">
               <%= image_tag event.file_path.url(:large) rescue ""%>
@@ -64,7 +64,7 @@
         </div>
       </div>
       <div class="row">
-        <% Event.themed_fests.each do |event|%>
+        <% Event.themed_fests.limit(3).each do |event|%>
           <div class="each-event">
             <div class="event_thumb text-center">
               <%= image_tag event.file_path.url(:large) rescue ""%>
@@ -160,7 +160,7 @@ empower them to discover and choose their next fest through greater convenience 
       </div>
       <div class="row">
         <div class="row">
-          <% EventPhoto.limit(10).each do |photo|%>
+          <% EventPhoto.order(" id desc").limit(10).each do |photo|%>
             <% next if photo.file_path.blank? %>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
