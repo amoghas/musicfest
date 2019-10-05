@@ -198,6 +198,7 @@
       </div>
     </div>
     <div class="row">
+    <h2> Fest Photos </h2>
       <% @event.event_photos.each do |photo|%>
         <div class="col-lg-3 col-md-4 col-xs-6 thumb">
             <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
@@ -210,6 +211,17 @@
         </div>
       <%end%>
     </div>
+
+    <div class="row">
+    <h2>Shop links<h2>
+      <% @event.event_links.shopping_cart.each do |shopping|%>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+
+        <p><%= link_to (image_tag(shopping.file_path.url(:large))  rescue shopping.display_name)   , shopping.link , target: :_blank %></p>
+        </div>
+      <%end%>
+    </div>
+
    </div>
   </div>
 </div>

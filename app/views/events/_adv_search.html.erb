@@ -7,9 +7,20 @@
 
   <%= simple_form_for :adv_search,
                       url: adv_search_events_path,
-                      method: "GET",
+                      method: "POST",
                       html: { id: "advance_search" } do |f| %>
     <div class="row">
+
+    <div class="col-md-6">
+        <%= f.input :title , 
+                    required: false,
+                    input_html: { class: "search_field" } , label: false  , placeholder: "Search by Name" %>
+      </div>
+      <div class="col-md-6">
+        <%= f.input :genres , 
+                    required: false,
+                    input_html: { class: "search_field" } , label: false  ,placeholder: "Search by genres"%>
+      </div>
       <div class="col-md-6">
         <%= f.input :country, collection: ISO3166::Country.all_names_with_codes,  as: :select, 
                     required: false,
@@ -18,23 +29,12 @@
       </div>
 
       <div class="col-md-6">
-        <%= f.input :month, collection: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],  as: :select, 
+        <%= f.input :month, collection: [["January",1], ["February",2], ["March",3], ["April",4], ["May",5], ["June",6] ,[ "July",7], ["August",8] , ["September", 9] ,["October",10] , ["November",11] , ["December" ,12]],  as: :select, 
                     required: false,
                     input_html: { class: "search_field" } , label: false ,
                      prompt:  'All Months' %>
       </div>
-      <div class="col-md-6">
-        <%= f.input :genres , 
-                    required: false,
-                    input_html: { class: "search_field" } , label: false ,
-                     prompt:  'All Genres' %>
-      </div>
-      <div class="col-md-6">
-        <%= f.input :theme, collection: Theme.all.map{|t| [t.tittle ,t.id]},  as: :select, 
-                    required: false,
-                    input_html: { class: "search_field" } , label: false ,
-                     prompt:  'All Types' %>
-      </div>
+      
     </div>
 
     <div class="view-actions">

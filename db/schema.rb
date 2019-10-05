@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191003091327) do
+ActiveRecord::Schema.define(version: 20191005065317) do
 
   create_table "event_links", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string  "name"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20191003091327) do
     t.boolean  "editor_choice"
     t.boolean  "published"
     t.integer  "theme_id"
+    t.string   "genres"
   end
 
   create_table "themes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|

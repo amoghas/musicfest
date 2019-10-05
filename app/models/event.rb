@@ -3,7 +3,7 @@ class Event < ApplicationRecord
   has_many :event_photos ,:dependent => :destroy
   belongs_to :theme , required: false
 
-  validates :title, :description, :djs , :location , :country,:file_path ,  presence: true
+  validates :title, :description, :djs , :genres, :location , :country,:file_path ,  presence: true
 
   accepts_nested_attributes_for :event_photos
   accepts_nested_attributes_for :event_links
@@ -31,10 +31,16 @@ class Event < ApplicationRecord
   }
 
   scope :adv_search, ->(q){
+    scope = self.published
+    scope = scope.where("title like (?)" ,"%#{q[:title]}%")  unless q[:title].blank?
+    scope = scope.where("genres like (?)" ,"%#{q[:genres]}%")  unless q[:genres].blank?
+    scope = scope.where("month(starts_at) = ?" ,"#{q[:month].to_i}")  unless q[:month].blank?
     unless q[:country].blank?
-      where(country: q[:country])
+      country_codes = ISO3166::Country.all_names_with_codes.select{|k , v| v.include?("M")}.collect{|k | k.last}
+      scope = scope.where(country: country_codes) unless country_codes.blank?
     end
-    
+    scope   
+        
   }
 
 

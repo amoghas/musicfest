@@ -14,6 +14,7 @@
       <%= f.input :venue %>
       <%= f.input :tags %>
       <%= f.input :intro %>
+      <%= f.input :genres %>
       <%= f.input :theme_id ,collection:  Theme.all.map{|t| [t.tittle ,t.id]}%>
       <%= f.input :editor_choice %>
       <%= f.input :published %>

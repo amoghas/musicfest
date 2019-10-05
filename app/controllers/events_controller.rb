@@ -35,10 +35,10 @@ class EventsController < ApplicationController
 
 
   def adv_search
-    @events = Event.adv_search(params[:adv_search])
+    @events = Event.adv_search(params[:adv_search]).page(params[:page]).per(20)
     respond_to do |format|
       format.js {}
-      format.html { redirect_to public_view_events_path}
+      format.html { render "public_view"}
     end
     
   end
@@ -116,13 +116,14 @@ class EventsController < ApplicationController
             :location, 
             :djs, 
             :venue, 
-            :tags, 
+            :tags,
+            :genres, 
             :intro,
             :editor_choice,
             :published,
             :theme_id, 
             event_links_attributes: 
-              [:id, :name, :description, :link, :link_type,  :_destroy], 
+              [:id, :name, :description, :link, :link_type,:file_path , :_destroy], 
             event_photos_attributes: 
               [:id, :name, :description, :file_path ,  :_destroy]
           )
