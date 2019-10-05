@@ -94,7 +94,7 @@
             outline: none;
             padding-left: 15px;
             border-radius: 5px;
-            color:#fff;
+            color:#000;
         }
         textarea {
             height: 176px;
@@ -102,8 +102,15 @@
         }
     }
     label {
-        color: #fff;
+        color: #000;
         cursor: pointer;
         font-weight: 400;
+    }
+}
+
+.contact-banner{
+    padding-bottom: 2rem;
+    img{
+        width: 100%;
     }
 }

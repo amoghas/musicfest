@@ -1,7 +1,7 @@
 <div class="inner-page show_page">
   <div class="text-center">
     <h1><%= @event.title %></h1>
-    <h3><%= @event.starts_at.strftime("%F") %>  | <%= @event.location %> | <%= @event.country_name %></h3>
+    <p><%= @event.starts_at.strftime("%F") %>  | <%= @event.location %> | <%= @event.country_name %></p>
     <% if current_user%>
       <div>
         <%= link_to 'Edit', edit_event_path(@event) %> |
@@ -12,13 +12,12 @@
   <div class="image-block text-center">
     <%= image_tag @event.file_path.url(:large)  rescue ""%>
   </div>
-  <div class="container-fluid mt-40">
+  <div class="container mt-40">
     <div class="row">
       <div class="col-lg-10">
-        <h3><%= @event.description %></h3>
-        <h4></h4>
+        <p><%= @event.description %></p>
       </div>
-      <div class="col-lg-2">
+      <div class="col-lg-2 d-none">
         <div class="row">
           <div class="col-md-4 text-center">
             <div class="card">
@@ -194,11 +193,11 @@
     <div class="row mt-40">
       <div class="col-md-12">
         <div class="section_title_style2 mb-20 text-center">
+          <h2> Fest Photos </h2>
         </div>
       </div>
     </div>
     <div class="row">
-    <h2> Fest Photos </h2>
       <% @event.event_photos.each do |photo|%>
         <div class="col-lg-3 col-md-4 col-xs-6 thumb">
             <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
@@ -211,9 +210,17 @@
         </div>
       <%end%>
     </div>
-
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row mt-40">
+      <div class="col-md-12">
+        <div class="section_title_style2 mb-20 text-center">
+          <h2>Shop links<h2>
+        </div>
+      </div>
+    </div>
     <div class="row">
-    <h2>Shop links<h2>
       <% @event.event_links.shopping_cart.each do |shopping|%>
         <div class="col-lg-3 col-md-4 col-xs-6 thumb">
 

@@ -1,15 +1,17 @@
 <div class="row">
   <% @events.each do |event|%>
-    <div class="each-event">
-      <div class="event_thumb text-center">
-        <%= image_tag event.file_path.url(:large)  rescue ""%>
-      </div>
-      <div class="event_content text-center">
-        <h5><%=event.title%></h5>
-        <%= link_to "View More" , event_path(event) ,class: "btn-book"%>
-        <div class="details d-flex">
-          <span><%= event.djs%></span>
-          <span class="ml-auto"><%= event.starts_at%></span>
+    <div class="col-md-4">
+      <div class="each-event">
+        <div class="event_thumb text-center">
+          <%= image_tag event.file_path.url(:large)  rescue ""%>
+        </div>
+        <div class="event_content text-center">
+          <h5><%=event.title%></h5>
+          <%= link_to "View More" , event_path(event) ,class: "btn-book"%>
+          <div class="details d-flex">
+            <span><%= event.djs%></span>
+            <span class="ml-auto"><%= event.starts_at%></span>
+          </div>
         </div>
       </div>
     </div>
