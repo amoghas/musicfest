@@ -31,10 +31,10 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <% @events.each do |event|%>
-      <div class="col-md-4">
+      <div class="col-md-3">
         <div class="each-event">
           <div class="event_thumb text-center">
             <%= image_tag event.file_path.url(:large) rescue ""%>
