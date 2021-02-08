@@ -13,7 +13,7 @@ gem 'country_select'
 gem 'kaminari'
 # Use sqlite3 as the database for Active Record
 gem 'mysql2', '~> 0.5.2'
-gem 'carrierwave', '~> 0.10.0'
+gem 'carrierwave', '~> 1.3.2'
 gem 'mini_magick', '~> 4.3'
 gem 'devise'
 gem 'bootstrap', '~> 4.3.1'
