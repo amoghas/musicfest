@@ -23,7 +23,7 @@ gem "fog-aws"
 gem "fog"
 gem 'pg', '~> 0.18.4'
 # Use Puma as the app server
-gem 'puma', '~> 3.0'
+gem 'puma', '~> 4.3'
 #gem 'wicked'
 gem 'high_voltage', '~> 3.1'
 # Use SCSS for stylesheets
